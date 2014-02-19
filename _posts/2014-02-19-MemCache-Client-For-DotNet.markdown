@@ -2,6 +2,7 @@
 layout: post
 title: "推荐一个.Net用Memcache Client库"
 categories: Mvc网站开发 可扩展性
+tags: AspNet Mvc MemCacheClient
 ---
 
 #类库信息

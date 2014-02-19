@@ -2,6 +2,7 @@
 layout: post
 title: "如何移除响应头中的.net framework 版本信息 以及mvc版本信息？"
 categories: Mvc网站开发 web安全
+tags: AspNet Mvc X-AspNet-Version X-AspNetMvc-Version
 ---
 
 ##1.先来看一个简单mvc3网站的响应头
