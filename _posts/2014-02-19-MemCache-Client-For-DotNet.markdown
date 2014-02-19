@@ -40,7 +40,7 @@ Enyim.Caching
   </memcached>
 {% endhighlight %}
 ##用例：
-{% highlight C# linenos %}
+{% highlight C# %}
 MemcachedClient mc = new MemcachedClient();
 mc.Store(StoreMode.Set, key, value, DateTime.Now.AddMinutes(min));
 mc.Get(key);
