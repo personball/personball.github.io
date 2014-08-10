@@ -1,5 +1,0 @@
----
-layout: post
-title: "Asp.net Mvc分布式页面缓存方案"
-categories: Mvc网站开发 可扩展性
----
