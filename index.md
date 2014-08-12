@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Personball's Blog 
+title: Posts List 
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
