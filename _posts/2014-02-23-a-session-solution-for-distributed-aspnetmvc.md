@@ -25,15 +25,18 @@ InProc模式的sessionState是不能用了，因为这是在web服务器本机�
 
 ####项目名：
 memcached-providers
+
 ####Github地址：
-https://github.com/enyim/memcached-providers [Click]
-[Click]:https://github.com/enyim/memcached-providers
+[https://github.com/enyim/memcached-providers](https://github.com/enyim/memcached-providers)
+
+
 ####命名空间：
 Enyim.Caching.Web
+
 ####获取方法：
 直接git clone源代码 或 VS使用 Nuget 找到Memcached SessionState Provider
 
 ###配置方法：
 需要配置membase，[参考](https://github.com/enyim/memcached-providers/blob/master/TestSite/Web.config) 
 
-__注意__，虽然该项目在Memecache下，但是它的SessionStateStoreProvider是由__Membase__提供存储的，__Membase兼容Memcache的api__，但是__未验证__是否可以直接由Memcache实例替代Membase。
+__注意__，虽然该项目在Memecache下，但是它的SessionStateStoreProvider是由 _Membase_ 提供存储的，__Membase兼容Memcache的api__，但是 _未验证_ 是否可以直接由Memcache实例替代Membase。
