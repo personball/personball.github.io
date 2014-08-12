@@ -1482,3 +1482,7 @@ hr {
   *display: inline;
   float: right;
 }
+
+.entry-content img{
+  margin-left: 10px;
+}
