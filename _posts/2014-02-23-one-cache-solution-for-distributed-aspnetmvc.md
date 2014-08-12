@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AspNetMvc分布式缓存方案"
-description: "AspNetMvc的一个分布式缓存方案"
+title: "Asp.Net Mvc分布式缓存方案"
+description: "Asp.Net Mvc的一个分布式缓存方案"
 category: Web开发
 tags: [AspNetMvc]
 ---
