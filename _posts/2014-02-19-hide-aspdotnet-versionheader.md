@@ -8,7 +8,6 @@ tags: [AspNetMvc]
 {% include JB/setup %}
 
 ####先来看一个简单mvc3网站的响应头
-
 ![响应头版本信息示意图](/assets/img/version_header_before.png "响应头版本信息示意图")
 
 ####修改Global.asax文件
