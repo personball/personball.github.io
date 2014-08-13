@@ -3,7 +3,7 @@ layout: post
 title: "对于Y组合子的理解"
 description: "对于Y组合子的理解"
 category: FP
-tags: [Y Combinator]
+tags: [Lisp]
 ---
 {% include JB/setup %}
 
