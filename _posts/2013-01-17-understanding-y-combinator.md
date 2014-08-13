@@ -62,9 +62,6 @@ fix即Y组合子，定义:
 	
 	Y = lambda y . (lambda x . y ( x x) ) (lambda x . y ( x x ) )
 
-关于Y组合子的特性及其他相关内容，请参考我之前列的导读：
-http://blog.chinaunix.net/uid-25508399-id-3475013.html
-
 感谢：[http://blog.csdn.net/pongba/article/details/1336028](http://blog.csdn.net/pongba/article/details/1336028)  
 还有：[http://blog.csdn.net/g9yuayon](http://blog.csdn.net/g9yuayon)  
 wiki：[http://zh.wikipedia.org/wiki/不动点组合子](http://zh.wikipedia.org/wiki/不动点组合子)
