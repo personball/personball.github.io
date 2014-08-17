@@ -2,7 +2,7 @@
 layout: post
 title: "Mac OSX 截图快捷键"
 description: "Mac OSX 截图快捷键"
-category: MacOS
+category: Mac_OS
 tags: [KeyBoardShortCuts]
 ---
 {% include JB/setup %}
