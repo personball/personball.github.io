@@ -76,8 +76,8 @@ restore有点问题，尝试失败。可能是示例程序依赖的库，在mac�
 
 参考：
 
-* [在Linux上运行ASP.NET vNext](http://www.cnblogs.com/sjyforg/p/3807038.html)
 * [ASP.NET vNext 概述](http://www.cnblogs.com/shanyou/p/3764070.html)
+* [在Linux上运行ASP.NET vNext](http://www.cnblogs.com/sjyforg/p/3807038.html)
 * [开发 ASP.NET vNext 初步总结（使用Visual Studio 2014 CTP1）](http://www.cnblogs.com/kvspas/p/asp-net-mvc6-vnext.html)
 * [#107:An exception was thrown by the type initializer for HttpApi](https://github.com/aspnet/Home/issues/107)
 
