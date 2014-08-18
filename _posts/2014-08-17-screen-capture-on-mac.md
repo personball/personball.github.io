@@ -8,6 +8,7 @@ tags: [KeyBoardShortCuts]
 {% include JB/setup %}
 
 `系统：OSX 10.9.4`
+`内容来自网络，存于此以便查阅`
 
 ###基本操作
 

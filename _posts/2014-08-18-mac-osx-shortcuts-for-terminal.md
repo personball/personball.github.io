@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Mac OSX 命令行快捷键"
+description: "Mac OSX Terminal Home End 快捷键"
+category: Mac_OS
+tags: [KeyBoardShortCuts]
+---
+{% include JB/setup %}
+
+`系统：OSX 10.9.4`
+`内容来自网络，存于此以便查阅`
+
+1. 将光标移动到行首：ctrl + a
+2. 将光标移动到行尾：ctrl + e
+3. 清除屏幕：       ctrl + l
+4. 搜索以前使用命令：ctrl + r
+5. 清除当前行：     ctrl + u
+6. 清除至当前行尾：  ctrl + k
+7. 单词为单位移动：  option + 方向键
