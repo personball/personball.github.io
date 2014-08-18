@@ -2,8 +2,8 @@
 layout: post
 title: "awk记录分割符RS"
 description: "awk记录分割符RS"
-category: BashShell
-tags: [awk]
+category: Shell
+tags: Awk Bash
 ---
 {% include JB/setup %}
 

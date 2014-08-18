@@ -2,8 +2,8 @@
 layout: post
 title: "shell大括号参数扩展（Parameter Expansion）"
 description: "shell大括号参数扩展（Parameter Expansion）"
-category: BashShell
-tags: [bash]
+category: Shell
+tags: Bash
 ---
 {% include JB/setup %}
 

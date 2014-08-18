@@ -2,8 +2,8 @@
 layout: post
 title: "awk去重复项"
 description: "awk去重复项"
-category: BashShell
-tags: [awk]
+category: Shell
+tags: Awk Bash
 ---
 {% include JB/setup %}
 

@@ -2,8 +2,8 @@
 layout: post
 title: "shell脚本调用自身"
 description: "shell脚本调用自身"
-category: BashShell
-tags: [bash]
+category: Shell
+tags: Bash
 ---
 {% include JB/setup %}
 

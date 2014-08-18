@@ -3,7 +3,7 @@ layout: post
 title: "初尝 AspNet vNext On Mac"
 description: "在Mac上尝试AspNet vNext"
 category: Web开发
-tags: [AspNetvNext]
+tags: AspNetvNext
 ---
 {% include JB/setup %}
 

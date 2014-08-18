@@ -2,8 +2,8 @@
 layout: post
 title: "awk利用关联数组合并记录"
 description: "awk利用关联数组合并记录,shell按关键字合并记录。"
-category: BashShell
-tags: [awk]
+category: Shell
+tags: Awk Bash
 ---
 {% include JB/setup %}
 

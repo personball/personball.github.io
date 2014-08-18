@@ -2,8 +2,8 @@
 layout: post
 title: "结合find的awk"
 description: "结合find的awk"
-category: BashShell
-tags: [awk]
+category: Shell
+tags: Awk Bash
 ---
 {% include JB/setup %}
 

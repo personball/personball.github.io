@@ -2,8 +2,8 @@
 layout: post
 title: "sed根据行号范围执行替换"
 description: "sed根据行号范围执行替换"
-category: BashShell
-tags: [sed]
+category: Shell
+tags: Sed Bash
 ---
 {% include JB/setup %}
 

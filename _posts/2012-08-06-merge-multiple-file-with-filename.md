@@ -2,8 +2,8 @@
 layout: post
 title: "awk多文件合并并按文件名分段"
 description: "Shell awk多文件合并，按文件名分段"
-category: BashShell
-tags: [awk]
+category: Shell
+tags: Awk Bash
 ---
 {% include JB/setup %}
 

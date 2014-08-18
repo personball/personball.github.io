@@ -2,8 +2,8 @@
 layout: post
 title: "趣味习题：获取最近一百年内的所有黑色星期五的日期"
 description: "趣味习题：获取最近一百年内的所有黑色星期五的日期"
-category: BashShell
-tags: [date]
+category: Shell
+tags: date Bash
 ---
 {% include JB/setup %}
 
