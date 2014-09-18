@@ -158,10 +158,13 @@ Ngen使用方法：
 
 ###哇咔咔，畅快！
 
+至此，心愿已了～  
+Ngen这种工具，不知道mono有没有，希望vnext正式版出来后，还能再见。  
+
 ###参考
 
-[让IIS 7 如同IIS 8 第一次请求不变慢](http://www.cnblogs.com/chehaoj/p/3432100.html)
-[Pre-Generated Mapping Views](http://msdn.microsoft.com/en-us/data/Dn469601.aspx)
-[来，给Entity Framework热热身](http://www.cnblogs.com/dudu/p/entity-framework-warm-up.html)
-[Performance Considerations for Entity Framework 4, 5, and 6](http://msdn.microsoft.com/en-us/data/hh949853.aspx#9)
-[Improving Startup Performance with NGen (EF6 Onwards)](http://msdn.microsoft.com/en-us/data/dn582034)
+[让IIS 7 如同IIS 8 第一次请求不变慢](http://www.cnblogs.com/chehaoj/p/3432100.html)  
+[Pre-Generated Mapping Views](http://msdn.microsoft.com/en-us/data/Dn469601.aspx)  
+[来，给Entity Framework热热身](http://www.cnblogs.com/dudu/p/entity-framework-warm-up.html)  
+[Performance Considerations for Entity Framework 4, 5, and 6](http://msdn.microsoft.com/en-us/data/hh949853.aspx#9)  
+[Improving Startup Performance with NGen (EF6 Onwards)](http://msdn.microsoft.com/en-us/data/dn582034)  
