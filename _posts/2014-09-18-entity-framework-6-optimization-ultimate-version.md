@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Entity Framework 6 优化"
-description: "Mvc + EF6 完整优化终极版"
+title: "Entity Framework 6 预热、启动优化"
+description: "Mvc + EF6 启动优化终极版，Start，Warm up，提速"
 category: ORM
 tags: [EntityFramework6]
 ---
