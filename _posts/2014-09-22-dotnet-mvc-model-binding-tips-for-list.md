@@ -3,7 +3,7 @@ layout: post
 title: "Asp.net Mvc 复杂类型模型绑定之列表属性绑定方法及注意点"
 description: "表单多值提交，checkboxlist 多选"
 category: web开发
-tags: AspnetMvc modelbinder
+tags: AspNetMvc ModelBinder
 ---
 {% include JB/setup %}
 
