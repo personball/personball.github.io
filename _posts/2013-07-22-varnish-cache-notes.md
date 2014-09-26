@@ -25,7 +25,7 @@ tags: [varnish]
 
 * 手动清理缓存的命令（3.0版和以前有出入来着）：
 
-	sudo varnishadm -T localhost:1234 ban.url .*$ -S /etc/varnish/secret
+    sudo varnishadm -T localhost:1234 ban.url .*$ -S /etc/varnish/secret
 
 * acl 只针对ip使用
 * 如果提示 nothing to repeat error code 106 一般就意味着正则写错了
