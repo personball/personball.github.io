@@ -354,6 +354,9 @@ submit.Login分支就不多说了，意思就是用户换个账号登陆。
 ###实践才会真的进步
 这次写的真不少，基本自己踩过的坑应该都写了吧，有空再回顾看下有没有遗漏的。今天就先到这里，over。
 
+###追加
+后续实践发现，由于使用了owin的中间件，ResourceServer依赖Microsoft.Owin.Host.SystemWeb，发布部署的时候不要遗漏该dll。
+
 
 
 
