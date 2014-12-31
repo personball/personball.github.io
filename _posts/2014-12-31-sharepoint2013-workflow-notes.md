@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SharePoint2013学习笔记之工作流"
+title: "SharePoint2013学习笔记之启用工作流"
 description: "SharePoint2013学习笔记之工作流，SharePoint2013工作流准备工作，SharePoint2013工作流基础，Windows Workflow Foundation。"
 category: sharepoint
 tags: SharePoint2013 Workflow WWF
