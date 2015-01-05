@@ -125,7 +125,7 @@ Authorization Server是本文的核心，也是最复杂的一部分。
         TokenEndpointPath = new PathString(Paths.TokenPath),
         ApplicationCanDisplayErrors = true,
     #if DEBUG
-        AllowInsecureHttp = true,
+        AllowInsecureHttp = true,  //重要！！这里的设置包含整个流程通信环境是否启用ssl
     #endif
         // Authorization server provider which controls the lifecycle of Authorization Server
         Provider = new OAuthAuthorizationServerProvider
@@ -165,10 +165,11 @@ Authorization Server是本文的核心，也是最复杂的一部分。
 
     ApplicationCanDisplayErrors = true, 
     #if DEBUG
-        AllowInsecureHttp = true,
+        AllowInsecureHttp = true, //重要！！这里的设置包含整个流程通信环境是否启用ssl
     #endif
 
-这里第一行，字面意思理解下，无视吧，就这么配置着。AllowInsecureHttp即设置这个OAuthServer是否启用SSL，即是否使用https协议。
+这里第一行不多说，字面意思理解下。  
+**重要！！**AllowInsecureHttp设置整个通信环境是否启用ssl，**不仅是OAuth服务端，也包含Client端（当设置为false时，若登记的Client端重定向url未采用https，则不重定向，踩到这个坑的话，问题很难定位，亲身体会）**。
 
     // Authorization server provider which controls the lifecycle of Authorization Server
     Provider = new OAuthAuthorizationServerProvider
