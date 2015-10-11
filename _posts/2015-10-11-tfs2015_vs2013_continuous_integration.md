@@ -22,7 +22,7 @@ tfs2015和tfs build server是之前其他同事装的，略去不讲，列一下
 过程这一节的配置，使用默认模板，重点在于配置：
 
 1. Build中的Projects 指定需要生成的解决方案；
-2. Build中的Configurations 指定要使用的配置，如 Any CPU|Release 如果配置名与默认可选的不同，可以直接编辑修改
+2. Build中的Configurations 指定要使用的配置，如 Any CPU\|Release 如果配置名与默认可选的不同，可以直接编辑修改
 3. Build中的Advanced 设置msbuild的参数选项;
 4. Test中的Advanced 可以选择关闭测试项目的执行，disable tests；
 
@@ -48,7 +48,7 @@ targets文件和csproj文件其实都是定义了一些msbuild的流程任务，
 
 参考 过程的配置重点 第二条
 
-Build中的Configurations 指定要使用的配置: Any CPU|YourConfigName 
+Build中的Configurations 指定要使用的配置: Any CPU\|YourConfigName 
 
 ##LibGit2Sharp报异常，git2-msvstfs.dll中 git__thread__init 不存在
 
