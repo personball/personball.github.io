@@ -22,8 +22,9 @@ tfs2015和tfs build server是之前其他同事装的，略去不讲，列一下
 过程这一节的配置，使用默认模板，重点在于配置：
 
 1. Build中的Projects 指定需要生成的解决方案；
-2. Build中的Advanced 设置msbuild的参数选项和msbuild的目标平台;
-3. Test中的Advanced 可以选择关闭测试项目的执行，disable tests；
+2. Build中的Configurations 指定要使用的配置，如 Any CPU|Release 如果配置名与默认可选的不同，可以直接编辑修改
+3. Build中的Advanced 设置msbuild的参数选项;
+4. Test中的Advanced 可以选择关闭测试项目的执行，disable tests；
 
 其中msbuild的参数选项，是首次配置最迷糊的地方，其实这里就是用/p 设置一些msbuild脚本要用到的变量值。  
 
@@ -42,6 +43,16 @@ targets文件和csproj文件其实都是定义了一些msbuild的流程任务，
 
 ##指定非官方的nuget源
 为解决方案启用nuget restore后，如果不使用官方的源，可以在.nuget目录下的NuGet.targets中配置 PackageSource。  
+
+##为何发布后，web.config 的配置转换没起作用？
+
+参考 过程的配置重点 第二条
+
+Build中的Configurations 指定要使用的配置: Any CPU|YourConfigName 
+
+##LibGit2Sharp报异常，git2-msvstfs.dll中 git__thread__init 不存在
+
+这个处理了很久，解决方式是在 msbuild 参数上加上 /p:GenerateBuildInfoConfigFile=false
 
 ##其他问题
 
