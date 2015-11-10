@@ -56,13 +56,13 @@ tags: bat msbuild
 DeployTestGroup01.bat，使用/T 选项，并非真正执行发布，只是测试预览。
 注意设置各项参数。
     
-    rem call path_to_the_cmd_file /T /M:MachineNameOrIp /U:UserName /P:Password
-    rem pause
+    call path_to_the_cmd_file /T /M:MachineNameOrIp /U:UserName /P:Password
+    pause
 
 DeployGroup01.bat，使用/Y 选项，实际执行发布。
 
-    rem call path_to_the_cmd_file /Y /M:MachineNameOrIp /U:UserName /P:Password
-    rem pause
+    call path_to_the_cmd_file /Y /M:MachineNameOrIp /U:UserName /P:Password
+    pause
 
 cmd_file的使用说明，可以在 xxxx.deploy-readme.txt 文件中查看。UserName和Password可以用有权限的域账号，也可以设置IIS管理器用户，参考webdeploy的设置。
 
