@@ -32,3 +32,13 @@ tags: Git
 4. 删除标签 git tag -d tagname
 5. 推送所有标签 git push origin --tags
 
+##暂存工作
+
+1. git stash
+2. git stash pop
+
+##其他
+
+1. 关联远程库 git remote -f add RepoName RepoAddr
+2. git merge -s ours --no-commit RepoName/branchName
+3. git read-tree --prefix=folderName/ -u RepoName/branchName
