@@ -3,7 +3,7 @@ layout: post
 title: "分享一个批处理脚本，创建iis站点及程序池"
 description: ""
 category: iis
-tags: bat iis
+tags: bat IIS
 ---
 {% include JB/setup %}
 
