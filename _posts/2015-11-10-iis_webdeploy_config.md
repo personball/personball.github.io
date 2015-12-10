@@ -14,7 +14,7 @@ tags: IIS Webdeploy
 
 1. 一台初始化的win2012；
 2. 安装服务器角色，启用IIS，启用IIS管理服务，启用.Net相关框架等；
-3. 安装webdeploy工具；
+3. 安装webdeploy工具(选择完整安装，管理服务委派是webdeploy安装的)；
 4. 打开iis，添加iis管理用户；
 5. 配置管理服务，允许远程管理；
 6. 管理服务委派，添加规则，添加createapp、setacl，并赋予刚添加的iis管理用户；

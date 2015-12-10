@@ -7,13 +7,24 @@ tags: bat IIS
 ---
 {% include JB/setup %}
 
+##建站批处理
+
+batch_createSites.bat
+
+    @echo off
+    rem 以管理员身份执行本脚本，可添加多条call 以建立多个站点
+    call path\to\createSites.bat www com.yourdomain yourdomain.com d:\Sites
+    pause
+
+createSites.bat
+
     @echo off
     rem 以管理员身份执行本脚本
 
-    set domain_id=msite
-    set site_name_prefix=com.ymc.platform.feature
-    set domain_postfix=feature.platform.ymc.com
-    set root_path=d:\WebSites
+    set domain_id=%1
+    set site_name_prefix=%2
+    set domain_postfix=%3
+    set root_path=%4
 
     set site_name=%site_name_prefix%.%domain_id%
     echo %site_name%
@@ -32,4 +43,12 @@ tags: bat IIS
     rem inetsrv\appcmd delete apppool /apppool.name:%site_name%
 
     pause
+
+##常用appcmd命令
+
+解锁config文件
+
+    inetsrv\appcmd unlock config -section:system.webServer/modules
+    inetsrv\appcmd unlock config -section:system.webServer/handlers
+
 
