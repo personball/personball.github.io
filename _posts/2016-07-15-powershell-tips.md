@@ -19,7 +19,8 @@ tags: [PowerShell]
 
 ### nuget控制台提供的特殊命令
 
-    Get-Project
+    Get-Project #获取当前项目的引用
+    Get-Package #获取当前项目所安装的nuget包信息
     
 ## TODO 
 
