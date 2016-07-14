@@ -7,7 +7,7 @@ tags: rabbitmq
 ---
 {% include JB/setup %}
 
-###安装
+### 安装
 
 系统：CentOS 6
 环境： rabbitmq 依赖的[Erlang环境包](https://www.rabbitmq.com/releases/erlang/erlang-18.1-1.el6.x86_64.rpm)
@@ -18,7 +18,7 @@ Server：[rabbitmq-server安装包](https://www.rabbitmq.com/releases/rabbitmq-s
 
     wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.5.7/rabbitmq-server-3.5.7-1.noarch.rpm
 
-###配置
+### 配置
 
 插件：启用web管理界面插件:
 
@@ -43,7 +43,7 @@ Server：[rabbitmq-server安装包](https://www.rabbitmq.com/releases/rabbitmq-s
 
 rabbitmqctl参考：[rabbitmqctl Doc](https://www.rabbitmq.com/man/rabbitmqctl.1.man.html)
 
-###运行时辅助命令
+### 运行时辅助命令
 
 查看端口占用情况
 
@@ -62,7 +62,7 @@ rabbitmqctl参考：[rabbitmqctl Doc](https://www.rabbitmq.com/man/rabbitmqctl.1
 
     service iptables stop
 
-###windows服务作为消费端
+### windows服务作为消费端
 
 创建服务的命令
 
@@ -73,7 +73,7 @@ rabbitmq配置格式
 
     amqp://gqc:gqc@10.16.35.92/gqc_host
 
-###CentOS辅助相关
+### CentOS辅助相关
 
 centos 添加epel库
 
@@ -84,7 +84,7 @@ centos 安装python pip
 
     yum install python-pip
 
-##rabbitmq 配置集群
+## rabbitmq 配置集群
 
 主节点所在服务器开放4369端口，开放25672端口
 
@@ -100,7 +100,7 @@ centos 安装python pip
     rabbitmqctl start_app
 
 
-##rabbitmq 集群特性
+## rabbitmq 集群特性
 
 1. 除队列外，其他元素全部自动镜像，队列默认持久化但不镜像（所在节点挂了则该队列内数据就下线了，节点恢复则原数据重新恢复上线），需要配置policy
 2. 当队列需要高可用时，需要配置policy,启用队列的镜像和自动同步，可设置ha-sync-batch-size以提高队列性能，可设置queue-master-locator策略

@@ -12,7 +12,7 @@ tags: AspNetMvc ModelBinder
 
 本文记录几个注意点，请先观察示例代码。
 
-###模型
+### 模型
 
     public class DesignerViewModel
     {
@@ -29,7 +29,7 @@ tags: AspNetMvc ModelBinder
         //CategoryStyle 仅含一个CategoryStyleID属性和Name属性
     }
 
-###控制器
+### 控制器
 
     public ActionResult Add()
     {
@@ -46,7 +46,7 @@ tags: AspNetMvc ModelBinder
         return View(model);
     }
 
-###视图
+### 视图
 
     @{
         List<CategoryStyle> styles = (List<CategoryStyle>)ViewBag.CaseStylesSelect;
@@ -64,7 +64,7 @@ tags: AspNetMvc ModelBinder
         }
     }
 
-###注意点：
+### 注意点：
 
 1. 提供默认值的hidden不能省；
 2. 提供默认值的hidden不能放在checkbox之前；
@@ -79,7 +79,7 @@ tags: AspNetMvc ModelBinder
 
 
 
-###参考资料
+### 参考资料
 
 [ASP.NET MVC 模型绑定的功能和问题](http://msdn.microsoft.com/zh-cn/magazine/hh781022.aspx)
 

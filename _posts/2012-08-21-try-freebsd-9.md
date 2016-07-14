@@ -11,12 +11,12 @@ tags: [FreeBSD9.0]
 由于对FreeBSD的稳定性仰慕已久，正好参照该书的指导进行体验一二。
 先感谢下该书作者余大大，同时做个声明：`本文中若有命令脚本涉及版权问题，请与personball@163.com联系`
 
-###2012/08/21
+### 2012/08/21
 
-####最小化安装，略；
+#### 最小化安装，略；
 这里本人安装的是FreeBSD9.0-i386 在官网找来的500多M的一个iso刻盘。
 
-####更新ports源
+#### 更新ports源
 国外的官方更新源一般网速都不太给力，改了更新源能省很多时间。
 
 	#修改ports配置文件 
@@ -35,7 +35,7 @@ portsnap首次执行
 
 	portsnap fetch update
 
-####安装axel
+#### 安装axel
 这个工具是代替默认的fetch，提高安装速度（其实就是获取源代码的速度吧？！）。
 
 	cd /usr/ports/ftp/axel
@@ -69,7 +69,7 @@ copy make.conf到etc目录下后，注意文件权限为只读，先改成可写
 	ftp://ftp.freeBSDchina.org/pub/FreeBSD/ports/distfiles/${DIST_SUBDIR}/
 	MASTER_SITE_OVERRIDE? =${MASTER_SITE_BACKUP}
 
-####设置sudo
+#### 设置sudo
 之前的操作都是用root账户登录的，但是在往后的工作中直接用root是比较危险的，这时候就需要sudo了。
 也要自己动手哦，不像我本子上的ubuntu12是默认装了。  
 依然去找ports
@@ -112,7 +112,7 @@ copy make.conf到etc目录下后，注意文件权限为只读，先改成可写
 	
 	sudo cat /root/.history  #该文件非root用户不可访问
 
-####安装vim
+#### 安装vim
 
 	cd /usr/ports/editors/vim
 	#事后提示：悲惨经历告诉大家，不要编译装这货，装精简版的吧 还有个vim-lite
@@ -122,16 +122,16 @@ copy make.conf到etc目录下后，注意文件权限为只读，先改成可写
 
 下回继续。。
 
-#2012/08/22
+# 2012/08/22
 
-####vim-lite
+#### vim-lite
 好吧，今天继续昨天没安装完的vim。  
 实在是悲催，昨天中断安装过程，今天发现可以继续，但是历经1个多小时的安装，最后蹦出来3个ERROR，具体也不说了。  
 回到/usr/ports/editor/目录，发现还有个vim-lite   精简版（难怪。。。昨天选的是非精简版安装，难怪需要那么多依赖支持。。悲剧。  
 马上 sudo make install clean 不到2分钟就装完了！！ （。。。。。。）  
 试了下，vim能用了，马上到主目录下添加自己的.vimrc吧。
 
-####安装bash并切换默认shell为bash
+#### 安装bash并切换默认shell为bash
 安装部分很简单
 
 	cd /usr/ports/shells/bash
@@ -150,5 +150,5 @@ copy make.conf到etc目录下后，注意文件权限为只读，先改成可写
 重登录，echo $SHELL ,输出 /usr/local/bin/bash 则表示切换成功！  
 bash相关设置，修改.profile  或者 .bashrc 就不讲了
 
-####结束
+#### 结束
 基础工作就此结束，接下来大家要部署啥服务，就自己随便玩啦，要安装的程序，先到/usr/ports下find一下，找不到再去网上搜，ports是个好东西，哈。

@@ -7,7 +7,7 @@ tags: [Lisp]
 ---
 {% include JB/setup %}
 
-###《The Little Schemer》 FP编程、lisp入门必备
+### 《The Little Schemer》 FP编程、lisp入门必备
 
 1. 这书貌似没中文版；
 2. 有英文pdf版；[完整版下载链接](http://down.51cto.com/data/671043)
@@ -16,7 +16,7 @@ tags: [Lisp]
 
 该书大部分内容，会在左边给你一段“代码”，右边给你详细的解释，然后从上到下，就是解释“代码”的运行过程。就跟单步调试一样的流程。过程有点像思维训练，刚开始觉得有趣，看到后来觉得枯燥，但是事实上最好多看几遍。
 
-###摘记一下五法十诫
+### 摘记一下五法十诫
 `Five Laws`
 
 >The Law of Car: 

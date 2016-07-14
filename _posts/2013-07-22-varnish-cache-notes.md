@@ -7,13 +7,13 @@ tags: [varnish]
 ---
 {% include JB/setup %}
 
-###varnish安装
+### varnish安装
 * [ubuntu12安装参考](https://www.varnish-cache.org/installation/ubuntu)  
 * [其他系统参考](https://www.varnish-cache.org/docs)
 
 如果选择了直接从源安装的方式的话，就不要自己去编译了，以免出现意外（悲剧的我，varnishlog 有点问题，之前先编译安装了，再从源安装，出问题了）。
 
-###基本入门
+### 基本入门
 参考：[在线版varnish-book](https://www.varnish-software.com/static/book/index.html)
 
 需要理解下vcl几个状态，主要是 vcl-recv 和 vcl-fetch 基本就够用了：
@@ -21,7 +21,7 @@ tags: [varnish]
 	vcl-recv  一般可以指定 使用哪个backend 可以设定 pass 规则
 	vcl-fetch  主要处理 缓存规则，设置缓存时间 beresp.ttl
 
-###Notes
+### Notes
 
 * 手动清理缓存的命令（3.0版和以前有出入来着）：
 
@@ -41,6 +41,6 @@ tags: [varnish]
 	...
 	set req.url=std.tolower(req.url);//vcl_recv中第一行处理url 
 
-###参考资料：
+### 参考资料：
 [http://blog.51yip.com/cache/618.html](http://blog.51yip.com/cache/618.html)  
 [http://anykoro.sinaapp.com/?p=261#1](http://anykoro.sinaapp.com/?p=261#1)

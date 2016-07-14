@@ -7,7 +7,7 @@ tags: AspNetMvc Enum
 ---
 {% include JB/setup %}
 
-###场景描述
+### 场景描述
 在web开发过程中，有时候需要根据Enum类型生成下拉菜单；  
 有时候在输出枚举类型的时候，又希望输出对应的更具描述性的字符串。  
 `喜欢直接用中文的请无视本文`
@@ -17,7 +17,7 @@ tags: AspNetMvc Enum
 
 `本文针对 Aspnet Mvc 4 开发而言`
 
-###Enum定义
+### Enum定义
 
 	using System.ComponentModel;
 	namespace xxxxx.yyyyy
@@ -44,7 +44,7 @@ tags: AspNetMvc Enum
 	    }
 	}
 
-###扩展HtmlHelper
+### 扩展HtmlHelper
 
 	using System;
 	using System.Collections.Generic;
@@ -115,11 +115,11 @@ tags: AspNetMvc Enum
 	}
 
 
-###视图层输出下拉菜单
+### 视图层输出下拉菜单
 
 	 @Html.DropDownListForEnum(model => model.Type, new { @class = "col-sm-2" })
 
-###扩展Enum
+### 扩展Enum
 
 	using System;
 	using System.ComponentModel;
@@ -147,11 +147,11 @@ tags: AspNetMvc Enum
 	    }
 	}
 
-###输出Enum value对应的Description
+### 输出Enum value对应的Description
 
 	@item.Type.GetEnumDescription()  //item是实体，Type是EN_ArticleType类型的属性
 
-###结束
+### 结束
 请自行尝试。
 ：）
 

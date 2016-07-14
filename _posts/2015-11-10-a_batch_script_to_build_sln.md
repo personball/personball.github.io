@@ -10,7 +10,7 @@ tags: bat msbuild
 最近工作成果之一，特此记录。
 
 
-###用于打包的批处理脚本
+### 用于打包的批处理脚本
 注意设置 path/to/your/solutionfile.sln 指向vs的解决方案文件。
 
     setlocal enabledelayedexpansion
@@ -34,7 +34,7 @@ tags: bat msbuild
     start .
 
 
-###项目的发布配置文件PRD.pubxml
+### 项目的发布配置文件PRD.pubxml
 注意设置DeployIisAppPath节，和IIS中的站点名称一致。
 
     <?xml version="1.0" encoding="utf-8"?>
@@ -52,7 +52,7 @@ tags: bat msbuild
       </PropertyGroup>
     </Project>
 
-###调用发布包自带脚本的批处理脚本DeployTestGroup01.bat和DeployGroup01.bat 
+### 调用发布包自带脚本的批处理脚本DeployTestGroup01.bat和DeployGroup01.bat 
 DeployTestGroup01.bat，使用/T 选项，并非真正执行发布，只是测试预览。
 注意设置各项参数。
     

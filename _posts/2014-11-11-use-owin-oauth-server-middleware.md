@@ -8,7 +8,7 @@ tags: AspNetMvc Owin OAuth2.0 Asp.Net.Identity
 {% include JB/setup %}
 
 
-###前言
+### 前言
 这里主要总结下本人最近半个月关于搭建OAuth2.0服务器工作的经验。至于为何需要OAuth2.0、为何是Owin、什么是Owin等问题，不再赘述。我假定读者是使用Asp.Net,并需要搭建OAuth2.0服务器,对于涉及的Asp.Net Identity(Claims Based Authentication)、Owin、OAuth2.0等知识点已有基本了解。若不了解，请先参考以下文章：
 
 * [MVC5 - ASP.NET Identity登录原理 - Claims-based认证和OWIN](http://www.cnblogs.com/jesse2013/p/aspnet-identity-claims-based-authentication-and-owin.html)
@@ -16,14 +16,14 @@ tags: AspNetMvc Owin OAuth2.0 Asp.Net.Identity
 * [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 * [rfc6749](http://tools.ietf.org/html/rfc6749)
 
-###从何开始？
+### 从何开始？
 在对前言中所列的各知识点有初步了解之后，我们从何处下手呢？  
 这里推荐一个demo：[OWIN OAuth 2.0 Authorization Server](https://code.msdn.microsoft.com/OWIN-OAuth-20-Authorization-ba2b8783)  
 除了demo外，还推荐准备好[katanaproject的源代码](http://katanaproject.codeplex.com/)  
 
 接下来，我们主要看这个demo
 
-###Demo:Authorization Server
+### Demo:Authorization Server
 从OAuth2.0的rfc文档中，我们知道OAuth有多种授权模式，这里只关注授权码方式。  
 首先来看Authorization Server项目，里面有三大块：
 
@@ -37,7 +37,7 @@ Authorization Server即提供OAuth服务的认证授权服务器；
 Resource Server即Client拿到AccessToken后携带AccessToken访问的资源服务器(这里仅简单提供一个/api/Me显示用户的Name)。  
 另外需要注意Constants项目，里面设置了一些关键数据，包含接口地址以及Client的Id和Secret等。  
 
-###Client:AuthorizationCodeGrant
+### Client:AuthorizationCodeGrant
 AuthorizationCodeGrant项目使用了DotNetOpenAuth.OAuth2封装的一个WebServerClient类作为和Authorization Server通信的Client。  
 （这里由于封装了底层的一些细节，致使不使用这个包和Authorization Server交互时可能会遇到几个坑，这个稍后再讲）  
 这里主要看几个关键点：
@@ -72,7 +72,7 @@ AuthorizationCodeGrant项目使用了DotNetOpenAuth.OAuth2封装的一个WebServ
 
 4.至此，Client端的代码分析完毕（RefreshToken请自行尝试，自行领会）。没有复杂的内容，按RFC6749的设计，Client所需的就只有这些步骤。对于Client部分，唯一需要再次郑重提醒的是，一定不能把AccessToken泄露出去，比如不加密直接放在浏览器cookie中。  
 
-###先易后难，接着看看Resource Server
+### 先易后难，接着看看Resource Server
 我们先把Authorization Server放一放，接着看下Resource Server。  
 Resource Server非常简单，App_Start中Startup.Auth配置中只有一句代码：  
 
@@ -99,10 +99,10 @@ Resource Server非常简单，App_Start中Startup.Auth配置中只有一句代�
 （关于接口验证scopes、获取用户主键、AccessToken中添加自定义标记等，在看过Authorization Server后再进行说明）  
 
 
-###Authorization Server
+### Authorization Server
 Authorization Server是本文的核心，也是最复杂的一部分。  
 
-####Startup.Auth配置部分
+#### Startup.Auth配置部分
 首先来看Authorization Server项目的Startup.Auth.cs文件，关于OAuth2.0服务端的设置就在这里。  
 
     // Enable Application Sign In Cookie
@@ -151,7 +151,7 @@ Authorization Server是本文的核心，也是最复杂的一部分。
         }
     });
 
-#####我们一段段来看：
+##### 我们一段段来看：
 
     ...
     AuthorizeEndpointPath = new PathString(Paths.AuthorizePath),
@@ -272,11 +272,11 @@ Form这种只要注意两个键名是 client\_id 和 client\_secret 。
 
 至此，Startup.Auth部分的基本结束，我们接下来看OAuth控制器部分。
 
-####OAuth控制器
+#### OAuth控制器
 OAuthController中只有一个Action，即Authorize。  
 Authorize方法并没有区分HttpGet或者HttpPost，主要原因可能是方法签名引起的(Action同名，除非参数不同，否则即使设置了HttpGet和HttpPost，编译器也会认为你定义了两个相同的Action，我们若是硬要拆开，可能会稍微麻烦点)。  
 
-#####还是一段段来看
+##### 还是一段段来看
 
     if (Response.StatusCode != 200)
     {
@@ -337,7 +337,7 @@ Authorize方法并没有区分HttpGet或者HttpPost，主要原因可能是方�
 
 submit.Login分支就不多说了，意思就是用户换个账号登陆。
 
-###写了这么多，基本分析已经结束，我们来看看还需要什么
+### 写了这么多，基本分析已经结束，我们来看看还需要什么
 
 首先，你需要一个自定义的Authorize属性，用于在ResourceServer中验证Scopes，这里要注意两点：
 
@@ -352,10 +352,10 @@ submit.Login分支就不多说了，意思就是用户换个账号登陆。
 
 然后，还有个ResourceServer常用的东西，就是用户信息的主键，一般可以从User.Identity.GetUserId()获取，不过这个方法是个扩展方法，需要using Microsoft.AspNet.Identity。至于为什么这里可以用呢？就是Claims里包含了用户信息的主键，不信可以调试下看看（注意观察添加claims那段代码，将登陆后原有的claims也累加进去了，这里就包含了用户登陆名Name和用户主键UserId）。
 
-###实践才会真的进步
+### 实践才会真的进步
 这次写的真不少，基本自己踩过的坑应该都写了吧，有空再回顾看下有没有遗漏的。今天就先到这里，over。
 
-###追加
+### 追加
 后续实践发现，由于使用了owin的中间件，ResourceServer依赖Microsoft.Owin.Host.SystemWeb，发布部署的时候不要遗漏该dll。
 
 

@@ -7,7 +7,7 @@ tags: bat IIS
 ---
 {% include JB/setup %}
 
-##建站批处理
+## 建站批处理
 
 batch_createSites.bat
 
@@ -44,7 +44,7 @@ createSites.bat
 
     pause
 
-##常用appcmd命令
+## 常用appcmd命令
 
 解锁config文件
 

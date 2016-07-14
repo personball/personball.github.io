@@ -40,7 +40,7 @@ tags: [AspNetMvc]
 
 ***
 
-###先来看看完成后的配置方式
+### 先来看看完成后的配置方式
 
 {% highlight xml %}
   <configSections>
@@ -49,7 +49,7 @@ tags: [AspNetMvc]
   <EmailHelperSection Smtp_Host="" Smtp_Account="" Smtp_Pwd="" />
 {% endhighlight %}
 
-###如何读取这种配置信息？
+### 如何读取这种配置信息？
 首先需要写这个类：wUtils.EmailHelperSection，wUtils是命名空间
 
 {% highlight C# %}
@@ -101,7 +101,7 @@ namespace wUtils
 }
 {% endhighlight %}
 
-###然后是使用配置信息的方式
+### 然后是使用配置信息的方式
 
 {% highlight C# %}
  EmailHelperSection config = (EmailHelperSection)ConfigurationManager.GetSection("EmailHelperSection");
@@ -109,4 +109,4 @@ namespace wUtils
  string password = config.Smtp_Pwd;
 {% endhighlight %}
 
-###Over
+### Over

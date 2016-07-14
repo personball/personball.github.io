@@ -10,7 +10,7 @@ tags: [EntityFramework6]
 好久没写博客了，终于憋出了一个大招，现在总结下。  
 虽然文章题目是针对EF的，但涉及的内容不仅仅是EF。
 
-###场景介绍
+### 场景介绍
 目前在做的一个项目，行业门户，项目部分站点按域名划分如下：
 
 1. user.xxx.com:用户登陆注册
@@ -41,7 +41,7 @@ manage.xxx.com/login为网站管理后台登陆入口。
 1. 站点代码有添加优化手段的情况下，回收程序池，并重启站点；
 2. 站点代码未变化的情况下，回收程序池，并重启站点。
 
-###初始状态
+### 初始状态
 `贴图不太方便，只给搜集的数据作为展示`  
 无任何优化措施的初始状态，更新各站点后：
 
@@ -57,7 +57,7 @@ manage.xxx.com/login为网站管理后台登陆入口。
 	2. company登陆体验到的延迟共计（15.19s，要感谢登陆owner的时候已经"激活"了user以及user的EF）
 	3. manage登陆体验到的延迟共计（2.96s + 8.23s）
 
-###第一个问题，站点首次访问的耗时大约5秒
+### 第一个问题，站点首次访问的耗时大约5秒
 
 `这时候还没EF什么事，只是一个空的登陆表单`
 
@@ -72,7 +72,7 @@ manage.xxx.com/login为网站管理后台登陆入口。
 
 这里我倒想真的试试解决这个问题。
 
-###第一个问题的解决方案：Application Initialization
+### 第一个问题的解决方案：Application Initialization
 
 这是在iis8出来后才有的，iis8内置的功能，而对于iis7.5也提供了一个扩展以支持这个功能。
 
@@ -100,7 +100,7 @@ manage.xxx.com/login为网站管理后台登陆入口。
 
 好了，完成这一步，解开了多年心结，省了5秒！
 
-###第二个优化点：EF Pre-Generated Mapping Views，大概节省4秒
+### 第二个优化点：EF Pre-Generated Mapping Views，大概节省4秒
 
 这个优化点，一般仔细去EF的网站找找还是容易找到的。  
 具体原因原理不说了，这里引用下博客园dudu大神的文章。  
@@ -128,7 +128,7 @@ manage.xxx.com/login为网站管理后台登陆入口。
 	2. company登陆体验到的延迟共计（5.5，同样要感谢登陆owner的时候已经"激活"了user的EF）
 	3. manage登陆体验到的延迟共计（4.23）
 
-###第三个优化点（杀手锏）：使用Ngen创建EntityFramework的本地代码镜像（EF版本6以上）
+### 第三个优化点（杀手锏）：使用Ngen创建EntityFramework的本地代码镜像（EF版本6以上）
 
 EF的文档要认真看啊！这个真是不小心挖出来的解决方案，主要是被我看到了一句话：
 
@@ -156,12 +156,12 @@ Ngen使用方法：
 	2. company登陆体验到的延迟共计（1.42s，同样要感谢登陆owner的时候已经"激活"了user的EF）
 	3. manage登陆体验到的延迟共计（925ms+197ms）
 
-###哇咔咔，畅快！
+### 哇咔咔，畅快！
 
 至此，心愿已了～  
 Ngen这种工具，不知道mono有没有，希望vnext正式版出来后，还能再见。  
 
-###参考
+### 参考
 
 [让IIS 7 如同IIS 8 第一次请求不变慢](http://www.cnblogs.com/chehaoj/p/3432100.html)  
 [Pre-Generated Mapping Views](http://msdn.microsoft.com/en-us/data/Dn469601.aspx)  

@@ -7,7 +7,7 @@ tags: REPL Tips Mac
 ---
 {% include JB/setup %}
 
-###irb
+### irb
 
 * 语言：Ruby
 * 帮助：help
@@ -15,20 +15,20 @@ tags: REPL Tips Mac
 * 自动完成：Tab+Tab (若未开启，则在`/etc/irbrc`中`require 'irb/completion'`)
 * 退出：quit/exit/CTRL+D
 
-###io
+### io
 
 * 语言：Io
 * 清屏：CTRL+L
 * 自动完成：无（可使用slotNames消息查看可用的槽）
 * 退出：exit/CTRL+D
 
-###gprolog
+### gprolog
 
 * 语言：Prolog
 * 自动完成：Tab+Tab
 * 退出：halt./CTRL+C e/CTRL+D
 
-###swipl
+### swipl
 
 * 语言：Prolog
 * 帮助：help.
@@ -40,7 +40,7 @@ tags: REPL Tips Mac
 * ;下一个解，a 全部解
 * 退出：halt./CTRL+D
 
-###scala
+### scala
 
 * 语言：Scala
 * 帮助：:help
@@ -48,26 +48,26 @@ tags: REPL Tips Mac
 * 自动完成：Tab
 * 退出：:quit/CTRL+D
 
-###erl
+### erl
 
 * 语言：Erlang
 * 命令以句点结束
 * 自动完成：Tab
 * 退出：CTRL+C a Enter
 
-###clj
+### clj
 
 * 语言：Clojure
 * 退出：CTRL+D
 
-###lein repl
+### lein repl
 
 * 语言：Clojure
 * 清屏：CTRL+L
 * 自动完成：Tab
 * 退出：quit/exit/CTRL+D
 
-###ghci
+### ghci
 
 * 语言：Haskell
 * 帮助：:?
@@ -75,7 +75,7 @@ tags: REPL Tips Mac
 * 自动完成：Tab
 * 退出：:quit/CTRL+D
 
-###rails console
+### rails console
 
 * 语言：Ruby
 * 加载了rails项目代码的irb,用法和irb差不多
@@ -86,7 +86,7 @@ tags: REPL Tips Mac
 ***
 下面还有几个涉及数据库的控制台（叫解释器貌似不太合适）
 
-###sqlite3 test.sqlite3
+### sqlite3 test.sqlite3
 
 * 帮助：.help
 * 查看表：.tables
@@ -94,14 +94,14 @@ tags: REPL Tips Mac
 * 清屏：CTRL+L
 * 退出：.quit/.exit/CTRL+D
 
-###redis-cli
+### redis-cli
 
 * 帮助：help
 * 查询语言：Nosql,具体用法参考命令手册
 * 清屏：CTRL+L
 * 退出：quit/exit/CTRL+D
 
-###mysql -uroot
+### mysql -uroot
 
 * 帮助：help
 * 查询语言：sql 以分号结尾
