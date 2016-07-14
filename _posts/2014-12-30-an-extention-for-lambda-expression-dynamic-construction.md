@@ -7,14 +7,14 @@ tags: AspNetMvc Lambda EntityFramework6
 ---
 {% include JB/setup %}
 
-###声明
+### 声明
 本文对Lambda表达式的扩展，示例代码来源于网络。
 
-###场景描述
+### 场景描述
 web开发查询功能的时候，如果查询条件比较多，就会遇到动态组合查询条件的情况。在手写sql的情况下，我们一般会根据传入的参数，针对where部分进行sql语句的动态组装，而现在在使用EF的时候遇到这个问题，查询条件不再是以sql字符串的形式传递了，而是一个Lambda表达式，那么如何进行Lambda表达式的动态构造呢？  
 虽然Lambda表达式可以声明为变量，但是要进行表达式累加，目前并没有默认的、好用且方便的方法，参考了很多资料，寻到一剂良方。
 
-###先看看效果
+### 先看看效果
 先看看扩展后的使用示例：
 
     public ActionResult List(int? page, string where)
@@ -37,7 +37,7 @@ web开发查询功能的时候，如果查询条件比较多，就会遇到动�
 这里的关键在于对Expression的扩展，和PredicateExtensions.True<T>()这个东西。  
 那么，我们看看PredicateExtensions的代码。  
 
-###扩展
+### 扩展
 简单的扩展，受益于ExpressionVisitor。
 
     public class ParameterRebinder : ExpressionVisitor

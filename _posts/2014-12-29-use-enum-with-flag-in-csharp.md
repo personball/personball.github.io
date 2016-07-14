@@ -7,11 +7,11 @@ tags: AspNetMvc Enum
 ---
 {% include JB/setup %}
 
-###前言
+### 前言
 
 对于Enum在AspNet Mvc中的应用，我之前提到一种扩展，[如何在 Asp.net Mvc 开发过程中更好的使用Enum](http://personball.com/web开发/2014/09/21/an-extension-for-enum-in-dotnet-mvc-develop/)。这里将介绍另一种更好的使用Enum的方法。  
 
-###Enum定义
+### Enum定义
 以一个代表权限的枚举作为示例。
 
     [Flags]
@@ -23,7 +23,7 @@ tags: AspNetMvc Enum
         Del=8
     }
 
-###按位或赋值以及按位与验证
+### 按位或赋值以及按位与验证
 原理很简单，请自行复习位运算。简述如下：  
 按位或，两个bit只要有一个是1，则置1；  
 按位与，两个bit只要有一个是0，则置0。  

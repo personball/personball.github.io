@@ -7,7 +7,7 @@ tags: SharePoint2013 Workflow WWF
 ---
 {% include JB/setup %}
 
-###场景及前言
+### 场景及前言
 最近工作上开始使用SharePoint2013，遇到新建场无法启用工作流的情况，故把解决方法及部分知识点总结下。  
 
 __注:__ SharePoint2013的工作流和SharePoint2010的工作流有一定差异，前后不兼容，不仅是开发方面，架构上也不一样。SharePoint2010的工作流是集成在SharePoint内部的，而SharePoint2013的工作流是独立出来的，这也是为什么下文指出需要再安装一个Workflow Manager1.0的原因所在。  
@@ -15,7 +15,7 @@ __注:__ SharePoint2013的工作流和SharePoint2010的工作流有一定差异�
 
 入门学习资料请参考本博客[Good Books](http://personball.com/books.html)
 
-###SharePoint2013工作流前提准备
+### SharePoint2013工作流前提准备
 
 * 开发机安装visio2013专业版（SharePoint Designer 2013也是必备的）
 * 服务器端[安装Workflow Manager 1.0](http://msdn.microsoft.com/zh-cn/library/jj193525.aspx)，[配置Workflow Manager 1.0](http://msdn.microsoft.com/zh-cn/library/jj193510.aspx)
@@ -23,7 +23,7 @@ __注:__ SharePoint2013的工作流和SharePoint2010的工作流有一定差异�
 
 经过以上步骤，使用SPD添加工作流的时候就可以选择SharePoint2013工作流平台类型了。
 
-###SharePoint2013工作流流程控制模板
+### SharePoint2013工作流流程控制模板
 
 * 流程图工作流
 * 顺序工作流

@@ -7,7 +7,7 @@ tags: [AspNetMvc]
 ---
 {% include JB/setup %}
 
-###首先，认识一下.Net的Cache组件
+### 首先，认识一下.Net的Cache组件
 在web开发过程中，刚开始，我们可能会这么使用缓存：
 
 {% highlight C# %}
@@ -35,7 +35,7 @@ HttpContext是http请求的上下文对象，在Timer这种定时处理的逻辑
 那么，在使用Cache时我们可以直接使用HttpRuntime.Cache。 
 但是，HttpRuntime.Cache是存在于单台web服务器的内存中的本机缓存，不利于水平扩展，需要替代者。
 
-###进入正题，分布式缓存Memcache
+### 进入正题，分布式缓存Memcache
 
 这个替代者就是Memcache
 [.Net使用Memcache](/web开发/2014/02/19/memcache-client-for-dotnet/)
