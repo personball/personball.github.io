@@ -2,8 +2,8 @@
 layout: post
 title: "nuget包管理器控制台下的powershell脚本介绍"
 description: "nuget包管理器控制台下的powershell脚本介绍"
-category: PowerShell Nuget
-tags: [PowerShell]
+category: PowerShell
+tags: PowerShell Nuget
 ---
 {% include JB/setup %}
 
