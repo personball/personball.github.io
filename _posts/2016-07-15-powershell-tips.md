@@ -36,8 +36,8 @@ powershell脚本会在每次nuget包管理器控制台启动的时候自动加�
     Open-PackagePage #打开nuget包相关网页
     Get-Project #获取当前项目的引用，平时没啥用，nuget console场景下自定义powershell时威力强大
 
-**powershell的注释符号为#**
-**具体命令可用选项，请点击下方参考链接**
+**powershell的注释符号为#**  
+**具体命令可用选项，请点击下方参考链接**  
 参考：[Package Manager Console Powershell Reference](https://docs.nuget.org/consume/package-manager-console-powershell-reference)
 
 ## 定制自己的powershell，减少重复工作
@@ -60,10 +60,11 @@ powershell脚本会在每次nuget包管理器控制台启动的时候自动加�
 
 这个脚本的作用很明显（可以忽略我在用的Abp框架），怎么使用呢？
 
-* 打开sln，在当前解决方案新建一个类库项目（xunit只要是个类库项目就可以）
-* 打开nuget包管理器控制台，选中刚新建的类库项目
-* 在nuget包管理器控制台输入install安Tab，选中`Install-PackageForAbpUnitTest`
-* 然后就等着所有包安装完毕，大功告成。
+    1. 打开sln，在当前解决方案新建一个类库项目（xunit只要是个类库项目就可以）
+    2. 打开nuget包管理器控制台，选中刚新建的类库项目
+    3. 在nuget包管理器控制台输入install安Tab，选中`Install-PackageForAbpUnitTest`
+    4. 然后就等着所有包安装完毕，大功告成。
+
 
 ### 自动设置项目的环境配置
 有些公司对于代码部署有严格的流程规范，一般都有多套环境用于开发、测试、验收、部署生产。
