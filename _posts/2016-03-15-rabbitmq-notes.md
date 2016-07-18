@@ -30,7 +30,7 @@ Server：[rabbitmq-server安装包](https://www.rabbitmq.com/releases/rabbitmq-s
 
 设置用户为管理员：
     
-    rabbitmqctl set__user__tags {username} administrator
+    rabbitmqctl set\_user\_tags {username} administrator
 
 添加vhost:
 
@@ -39,7 +39,7 @@ Server：[rabbitmq-server安装包](https://www.rabbitmq.com/releases/rabbitmq-s
 
 设置用户对vhost的权限:
 
-    rabbitmqctl set_permissions -p /myvhost tonyg "^tonyg-.*" ".*" ".*"
+    rabbitmqctl set_permissions -p myvhost tonyg "^tonyg-.*" ".*" ".*"
 
 rabbitmqctl参考：[rabbitmqctl Doc](https://www.rabbitmq.com/man/rabbitmqctl.1.man.html)
 
