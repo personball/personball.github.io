@@ -8,7 +8,7 @@ tags: Awk Entityframewok6
 {% include JB/setup %}
 
 ## 目标:根据业务提供的两份数据，生成DataSeed代码
-SampleData
+SampleDataA
 
     上海  华东一线
     上饶  华东四线
@@ -29,7 +29,7 @@ SampleDataB
     awk '{a[$1]=a[$1]" "$2}END{for(i in a){print i" "a[i]}}' SampleDataA SampleDataB >blog_data
 
 ## 执行结果
-SampleResult
+blog_data
 
     上海  华东一线 1D04E3A1-EE87-431C-9AA7-AC245014C511
     临汾  华北四线 1CCC7D65-DA6E-41DA-BBD9-69CE8CEDEBD1
