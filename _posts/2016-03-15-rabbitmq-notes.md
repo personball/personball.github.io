@@ -30,7 +30,7 @@ Server：[rabbitmq-server安装包](https://www.rabbitmq.com/releases/rabbitmq-s
 
 设置用户为管理员：
     
-    rabbitmqctl set\_user\_tags {username} administrator
+    rabbitmqctl set_user_tags {username} administrator
 
 添加vhost:
 
