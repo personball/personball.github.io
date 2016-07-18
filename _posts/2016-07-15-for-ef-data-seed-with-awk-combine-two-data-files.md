@@ -49,5 +49,5 @@ blog_data
 * 选中guid部分，ctrl+x，移动光标到行首，ctrl+v
 * 移动光标到行首，直接输入AddIfNotExist...等
 
-//TODO GIT image 待录制
+![vscode blog data](/assets/img/vscode_blog_data.gif)
 
