@@ -22,6 +22,7 @@ powershell脚本会在每次nuget包管理器控制台启动的时候自动加�
     code $profile //code命令是vscode编辑器
     notepad $profile //notepad是用记事本打开这个文件
     mkdir -force (split-path $profile) //假如遇到这个文件所在的目录未创建，可用此命令创建目录
+    . $profile //编辑保存后，重新加载
 
 参考：[Setting up a NuGet Powershell Profile](https://docs.nuget.org/consume/Setting-up-NuGet-PowerShell-Profile.md)
 
