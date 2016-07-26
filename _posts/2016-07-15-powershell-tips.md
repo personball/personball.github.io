@@ -57,11 +57,11 @@ powershell脚本会在每次nuget包管理器控制台启动的时候自动加�
         Install-Package xunit.runner.visualstudio
         Install-Package xunit
         Install-Package Effort.EF6
-    } #可能需要重启下nuget包管理器控制台，或者重启vs
+    } #保存后，在nuget控制台执行 . $profile 重新加载即可使用
 
 这个脚本的作用很明显（可以忽略我在用的Abp框架），怎么使用呢？
 
-    1. 打开sln，在当前解决方案新建一个类库项目（xunit只要是个类库项目就可以）
+    1. 在当前解决方案新建一个类库项目（xunit只要是个类库项目就可以）
     2. 打开nuget包管理器控制台，选中刚新建的类库项目
     3. 在nuget包管理器控制台输入install安Tab，选中`Install-PackageForAbpUnitTest`
     4. 然后就等着所有包安装完毕，大功告成。
