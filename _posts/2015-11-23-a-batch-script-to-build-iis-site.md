@@ -50,5 +50,6 @@ createSites.bat
 
     inetsrv\appcmd unlock config -section:system.webServer/modules
     inetsrv\appcmd unlock config -section:system.webServer/handlers
+    inetsrv\appcmd list site
 
 
