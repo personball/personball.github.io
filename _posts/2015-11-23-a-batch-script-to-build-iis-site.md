@@ -60,3 +60,10 @@ createSites.bat
     inetsrv\appcmd set apppool %apppool_name% /startMode:AlwaysRunning
     inetsrv\appcmd set site %site_name% /applicationDefaults.preloadEnabled:True
 
+批量设置站点启用预加载
+
+    C:\Windows\system32>inetsrv\appcmd list app /xml|%systemroot%\system32\inetsrv\appcmd set site /in /applicationDefaults.preloadEnabled:True
+
+批量设置应用程序池AlwaysRunning
+
+    C:\Windows\system32>inetsrv\appcmd.exe list app /xml|%systemroot%\system32\inetsrv\appcmd set apppool /in /startMode:AlwaysRunning
