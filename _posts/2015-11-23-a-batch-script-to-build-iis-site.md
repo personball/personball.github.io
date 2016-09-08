@@ -50,6 +50,13 @@ createSites.bat
 
     inetsrv\appcmd unlock config -section:system.webServer/modules
     inetsrv\appcmd unlock config -section:system.webServer/handlers
+
+列出所有iis站点
+    
     inetsrv\appcmd list site
 
+启用预加载和AlwaysRunning
+
+    inetsrv\appcmd set apppool %apppool_name% /startMode:AlwaysRunning
+    inetsrv\appcmd set site %site_name% /applicationDefaults.preloadEnabled:True
 
