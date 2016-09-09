@@ -40,13 +40,15 @@ tags: Bat IIS WebDeploy
 >       # Adds providers to skip when performing a backup
 >       Configure-Backups -AddExcludedProviders @("dbmysql","dbfullsql")
 
-4. 默认备份目录为`{sitePathParent}\{siteName}_snapshots`
-5. msdeploy 查看备份设置
+*默认备份目录为:*`{sitePathParent}\{siteName}_snapshots`
 
-        rem 查看本地backup配置，cmd命令
-        msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy -xml
-        rem 查看指定服务器的backup配置
-        msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy,computername=sh-test -xml
+查看本地backup配置，cmd命令
+        
+    msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy -xml
+        
+查看指定服务器的backup配置
+
+    msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy,computername=sh-test -xml
 
 >        <output>  
 >        <traceEvent eventLevel="Info" type="Microsoft.Web.Deployment.DeploymentAgentTraceEvent" message="正在将 ID“73c5bf3e-9ffe-4c9d-bdfa-8d2bb402c6bf”用于到远程服务器的连接。" />  
