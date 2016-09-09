@@ -21,24 +21,24 @@ tags: Bat IIS WebDeploy
 2. 加载BackupScripts.ps1（加载ps脚本，使用`. .\BackupScripts.ps1`）
 3. 根据需要执行以下命令
 
-        # Turns on all backup functionality
-        TurnOn-Backups -On $true                  #启用必须执行这条
-        # Turns off all backup functionality
-        TurnOn-Backups -On $false
-        # Changes default global backup behavior to enabled
-        Configure-Backups -Enabled $true          #启用必须执行这条
-        # Changes default backup behavior for site "foo" to enabled
-        Configure-Backups -SiteName "foo" -Enabled $true
-        # Changes the path of where backups are stored to a sibling directory named "siteName_snapshots".  
-        # For more information about path variables, see the "backupPath" attribute in the section 
-        # "Configuring  Backup Settings on the Server for Global usage manually in IIS Config"
-        Configure-Backups -BackupPath "{SitePathParent}\{siteName}_snapshots"
-        # Configures default backup limit to 5 backups
-        Configure-Backups -NumberOfBackups 5
-        # Configures sync behavior to fail if a sync fails for any reason
-        Configure-Backups -ContinueSyncOnBackupFailure $false  #如果备份失败则不继续同步
-        # Adds providers to skip when performing a backup
-        Configure-Backups -AddExcludedProviders @("dbmysql","dbfullsql")
+>       # Turns on all backup functionality
+>       TurnOn-Backups -On $true                  #启用必须执行这条
+>       # Turns off all backup functionality
+>       TurnOn-Backups -On $false
+>       # Changes default global backup behavior to enabled
+>       Configure-Backups -Enabled $true          #启用必须执行这条
+>       # Changes default backup behavior for site "foo" to enabled
+>       Configure-Backups -SiteName "foo" -Enabled $true
+>       # Changes the path of where backups are stored to a sibling directory named "siteName_snapshots".  
+>       # For more information about path variables, see the "backupPath" attribute in the section 
+>       # "Configuring  Backup Settings on the Server for Global usage manually in IIS Config"
+>       Configure-Backups -BackupPath "{SitePathParent}\{siteName}_snapshots"
+>       # Configures default backup limit to 5 backups
+>       Configure-Backups -NumberOfBackups 5
+>       # Configures sync behavior to fail if a sync fails for any reason
+>       Configure-Backups -ContinueSyncOnBackupFailure $false  #如果备份失败则不继续同步
+>       # Adds providers to skip when performing a backup
+>       Configure-Backups -AddExcludedProviders @("dbmysql","dbfullsql")
 
 4. 默认备份目录为`{sitePathParent}\{siteName}_snapshots`
 5. msdeploy 查看备份设置
@@ -46,7 +46,7 @@ tags: Bat IIS WebDeploy
         #查看本地backup配置，cmd命令
         msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy -xml
         #查看指定服务器的backup配置
-        C:\Program Files\IIS\Microsoft Web Deploy V3>msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy,computername=sh-test -xml
+        msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy,computername=sh-test -xml
         <output>
         <traceEvent eventLevel="Info" type="Microsoft.Web.Deployment.DeploymentAgentTraceEvent" message="正在将 ID“73c5bf3e-9ffe-4c9d-bdfa-8d2bb402c6bf”用于到远程服务器的连接。" />
         <MSDeploy.backupSettings>
@@ -80,26 +80,26 @@ tags: Bat IIS WebDeploy
 
     公共设置(可用于所有提供程序):
 
-    computerName=<名称>             远程计算机的名称或代理 URL
-    wmsvc=<名称>                    用于 Web 管理服务(WMSvc)的远程计算机的名称或代
-    理 URL。假设服务正在侦听端口
-                                    8172。
-    authtype=<名称>                 要使用的身份验证方案。默认设置为“NTLM”。如果
-    指定了 wmsvc
-                                    选项，则默认设置为“基本”。
-    userName=<名称>                 远程连接时用于身份验证的用户名(如果使用“基本
-    ”身份验证，则为必填项)。
-    password=<密码>                 用于远程连接的用户密码(如果使用“基本”身份验
-    证，则为必填项)。
-    storeCredentials=<目标>         用户名和密码将存储在 Windows 凭据管理器中的目
-    标标识符下。
-    getCredentials=<目标>           目标标识在连接到远程计算机时要使用的 Windows
-    凭据管理器中的凭据(用户名和密码)。
-    encryptPassword=<密码>          用于加密/解密任何安全数据的密码。
-    includeAcls=<布尔值>             如果为 True，则在操作中包括 ACL (适用于文件系
-    统、注册表和元数据库)。
-    tempAgent=<布尔值>               在远程操作期间，暂时安装远程代理。
-    publishSettings=<文件路径>        包含远程连接信息的发布设置文件的文件路径。
+>    computerName=<名称>             远程计算机的名称或代理 URL
+>    wmsvc=<名称>                    用于 Web 管理服务(WMSvc)的远程计算机的名称或代
+>    理 URL。假设服务正在侦听端口
+>                                    8172。
+>    authtype=<名称>                 要使用的身份验证方案。默认设置为“NTLM”。如果
+>    指定了 wmsvc
+>                                    选项，则默认设置为“基本”。
+>    userName=<名称>                 远程连接时用于身份验证的用户名(如果使用“基本
+>    ”身份验证，则为必填项)。
+>    password=<密码>                 用于远程连接的用户密码(如果使用“基本”身份验
+>    证，则为必填项)。
+>    storeCredentials=<目标>         用户名和密码将存储在 Windows 凭据管理器中的目
+>    标标识符下。
+>    getCredentials=<目标>           目标标识在连接到远程计算机时要使用的 Windows
+>    凭据管理器中的凭据(用户名和密码)。
+>    encryptPassword=<密码>          用于加密/解密任何安全数据的密码。
+>    includeAcls=<布尔值>             如果为 True，则在操作中包括 ACL (适用于文件系
+>    统、注册表和元数据库)。
+>    tempAgent=<布尔值>               在远程操作期间，暂时安装远程代理。
+>    publishSettings=<文件路径>        包含远程连接信息的发布设置文件的文件路径。
 
 
 [参考文章](http://www.iis.net/learn/publish/using-web-deploy/web-deploy-automatic-backups)
