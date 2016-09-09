@@ -8,7 +8,8 @@ tags: Bat IIS WebDeploy
 {% include JB/setup %}
 
 
-前提准备：完整安装webdeploy 3.0版
+前提准备：完整安装Microsoft Web Deploy 3
+下载页面：[WebDeploy_amd64_zh-CN.msi](http://www.iis.net/downloads/microsoft/web-deploy)
 
 ## msdeploy 同步站点
 命令所在目录`C:\Program Files\IIS\Microsoft Web Deploy V3>`
