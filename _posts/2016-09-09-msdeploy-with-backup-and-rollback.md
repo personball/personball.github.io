@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "nuget包管理器控制台下的powershell脚本介绍"
-description: "nuget包管理器控制台下的powershell脚本介绍"
-category: PowerShell
-tags: PowerShell Nuget
+title: "IIS站点发布和备份工具MSdeploy介绍"
+description: "IIS站点发布和备份工具MSdeploy介绍"
+category: IIS
+tags: Bat IIS WebDeploy
 ---
 {% include JB/setup %}
 
