@@ -47,18 +47,19 @@ tags: Bat IIS WebDeploy
         msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy -xml
         rem 查看指定服务器的backup配置
         msdeploy.exe -verb:dump -source:backupSettings=com.test.msdeploy,computername=sh-test -xml
-        <output>  
-        <traceEvent eventLevel="Info" type="Microsoft.Web.Deployment.DeploymentAgentTraceEvent" message="正在将 ID“73c5bf3e-9ffe-4c9d-bdfa-8d2bb402c6bf”用于到远程服务器的连接。" />  
-        <MSDeploy.backupSettings>  
-            <backupSettings path="com.test.msdeploy">  
-            <backupSetting turnedOn="True" ReadWrite="False" />  
-            <backupSetting enabled="True" ReadWrite="False" />  
-            <backupSetting numberOfBackups="4" ReadWrite="False" />  
-            <backupSetting continueSyncOnBackupFailure="False" ReadWrite="False" />  
-            <backupSetting excludedProviders="appPoolEnable32Bit; appHostAuthOverride;appPoolNetFx; appPoolPipeline; setAcl; createApp" ReadWrite="False" />  
-            </backupSettings>  
-        </MSDeploy.backupSettings>  
-        </output>  
+
+>        <output>  
+>        <traceEvent eventLevel="Info" type="Microsoft.Web.Deployment.DeploymentAgentTraceEvent" message="正在将 ID“73c5bf3e-9ffe-4c9d-bdfa-8d2bb402c6bf”用于到远程服务器的连接。" />  
+>        <MSDeploy.backupSettings>  
+>            <backupSettings path="com.test.msdeploy">  
+>            <backupSetting turnedOn="True" ReadWrite="False" />  
+>            <backupSetting enabled="True" ReadWrite="False" />  
+>            <backupSetting numberOfBackups="4" ReadWrite="False" />  
+>            <backupSetting continueSyncOnBackupFailure="False" ReadWrite="False" />  
+>            <backupSetting excludedProviders="appPoolEnable32Bit; appHostAuthOverride;appPoolNetFx; appPoolPipeline; setAcl; createApp" ReadWrite="False" />  
+>            </backupSettings>  
+>        </MSDeploy.backupSettings>  
+>        </output>  
         
 
 *msdeploy的source选项和dest选项可以通过指定computername进行远程服务器之间操作*
@@ -78,7 +79,7 @@ tags: Bat IIS WebDeploy
 
 ## msdeploy公共设置
 
-    公共设置(可用于所有提供程序):
+公共设置(可用于所有提供程序):
 
 * computerName=<名称>         远程计算机的名称或代理 URL
 * wmsvc=<名称>                用于 Web 管理服务(WMSvc)的远程计算机的名称或代理 URL。假设服务正在侦听端口8172。
