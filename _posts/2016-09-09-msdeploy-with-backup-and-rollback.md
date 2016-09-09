@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "IIS站点发布和备份工具MSdeploy介绍"
-description: "IIS站点发布和备份工具MSdeploy介绍"
+title: "IIS站点发布、同步和备份工具MSdeploy(WebDeploy)介绍"
+description: "IIS站点发布和备份工具MSdeploy（WebDeploy）介绍"
 category: IIS
 tags: Bat IIS WebDeploy
 ---
