@@ -64,7 +64,7 @@ tags: Bat IIS WebDeploy
 >        </output>  
         
 
-*msdeploy的source选项和dest选项可以通过指定computername进行远程服务器之间操作*
+*msdeploy的source选项和dest选项可以通过指定computername进行远程服务器之间操作*  
 *msdeploy的备份配置远程同步需要设置iis服务委派和授权等，略过不表*
 
 ## msdeploy 手动backup
