@@ -97,4 +97,21 @@ tags: Bat IIS WebDeploy
 * publishSettings=<文件路径>  包含远程连接信息的发布设置文件的文件路径。
 
 
+## 追加Tips
+
+Q：完整安装Microsoft Web Deploy 3后，在指定目录并未发现BackupScripts.ps1文件？
+A：windows 系统角色与功能未启用iis的管理工具-管理服务，开启后重新安装Web Deploy即可。
+
+powershell配置自动备份脚本，以管理员身份打开powershell ISE编辑器，加载以下脚本执行即可。
+
+    #run as administrator
+    cd '..\..\Program Files\IIS\Microsoft Web Deploy V3\Scripts'
+    . .\BackupScripts.ps1
+    TurnOn-Backups -On $true
+    Configure-Backups -Enabled $true
+    Configure-Backups -BackupPath "{SitePathParent}\snapshots\{siteName}"
+    Configure-Backups -ContinueSyncOnBackupFailure $false
+    Configure-Backups -NumberOfBackups 5
+    pause
+
 [参考文章](http://www.iis.net/learn/publish/using-web-deploy/web-deploy-automatic-backups)
