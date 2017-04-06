@@ -113,3 +113,23 @@ policy设置范例(gqc_host中所有队列启用高可用，自动在所有节�
     Apply to        :   queues
     Definition      :   ha-mode:all  ha-sync-mode:automatic
     Priority        :   0
+
+
+## 追记CentOS7安装步骤
+
+* wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.9/rabbitmq-server-3.6.9-1.el7.noarch.rpm
+* yum install erlang
+* rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+* yum install rabbitmq-server-3.6.9-1.el7.noarch.rpm
+* systemctl enable rabbitmq-server.service
+* systemctl start rabbitmq-server
+* rabbitmq 配置web管理界面插件、添加用户、添加vhost等
+* systemctl edit rabbitmq-server 配置LimitNOFILE放开文件描述符限制
+
+systemctl edit rabbitmq-server 输入范例：
+
+    [Service]
+    LimitNOFILE=32768
+
+## 参考资料
+[官方RPM安装文档](http://www.rabbitmq.com/install-rpm.html)
