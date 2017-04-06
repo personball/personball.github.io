@@ -131,5 +131,17 @@ systemctl edit rabbitmq-server 输入范例：
     [Service]
     LimitNOFILE=32768
 
+### CentOS7防火墙firewalld管理
+
+* firewall-cmd --zone=public --add-port=15672/tcp --permanent
+* firewall-cmd --zone=public --add-port=5672/tcp --permanent
+* firewall-cmd --reload
+
+### CentOS7服务管理
+
+* systemctl --list-unit-files|grep rabbitmq
+* systemctl enable rabbitmq-server.service
+* systemctl edit rabbitmq-server 服务配置（放开文件描述符限制）
+
 ## 参考资料
 [官方RPM安装文档](http://www.rabbitmq.com/install-rpm.html)
