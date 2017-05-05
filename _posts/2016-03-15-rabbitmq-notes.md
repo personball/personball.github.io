@@ -139,7 +139,7 @@ systemctl edit rabbitmq-server 输入范例：
 
 ### CentOS7服务管理
 
-    systemctl --list-unit-files|grep rabbitmq
+    systemctl list-unit-files|grep rabbitmq
     systemctl enable rabbitmq-server.service
     systemctl edit rabbitmq-server 服务配置（放开文件描述符限制）
 
