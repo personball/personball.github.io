@@ -41,13 +41,13 @@ tags: [ABP]
 1. 领域层代码设计:防止对象泛滥，领域服务轻量化
 1. 领域层代码设计:业务异常与错误码设计及异常提示语的本地化
 
-## How To Extend Abp 系列 
+## How To Extend Abp
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
 1. 如何引入消息机制?基于Rebus.Rabbitmq
 
 ## 其他主题
-1. T4应用:权限树定义（需璞玉授权）
+1. T4应用:权限树定义（需puyuwang授权）
 1. T4应用:MqMessages Auto Generate
 1. T4应用:EventDataPublishHandler Auto Generate
 1. AbpTestBase:单元测试项目，推荐实践
