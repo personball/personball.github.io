@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "abp framework series"
+title: "Abp介绍和经验分享-目录"
 description: "Abp介绍和经验分享系列文章"
 category: ABP
 tags: [ABP]
@@ -44,14 +44,14 @@ tags: [ABP]
 ## How To Extend Abp
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
-1. 如何引入消息机制?基于Rebus.Rabbitmq
+1. 如何引入消息机制?(基于Rebus.Rabbitmq)
 
 ## 其他主题
-1. T4应用:权限树定义（需puyuwang授权）
+1. T4应用:权限树定义（需puyu授权）
 1. T4应用:MqMessages Auto Generate
 1. T4应用:EventDataPublishHandler Auto Generate
 1. AbpTestBase:单元测试项目，推荐实践
 
-## Abplus扩展库介绍，解决的问题
-1. webapi接口版本化
+## Abplus扩展库介绍
+1. WebApi接口版本化
 1. 发布队列消息的泛型版默认handler实现
