@@ -41,7 +41,7 @@ _以下，称这个使用了IdentityServer4的OAuth2.0服务的项目称为Passp
 1. [IdentityServer4官方文档:using-entityframework-core-for-configuration-data](https://identityserver4.readthedocs.io/en/release/quickstarts/8_entity_framework.html#using-entityframework-core-for-configuration-data)
 1. （可选）UI方面可临时用[quickstart-ui](https://identityserver4.readthedocs.io/en/release/intro/packaging.html#quickstart-ui)
 1. （可选）如果是IdentityServer3，还有[IdentityServer3.Admin](https://github.com/IdentityServer/IdentityServer3.Admin)和[IdentityServer3.Admin.EntityFramework](https://github.com/IdentityServer/IdentityServer3.Admin.EntityFramework)
-1. Token签名及验签机制选择:RSA，[配置方法参考](http://www.cnblogs.com/skig/p/6079457.html)
+1. Token签名及验签机制选择:RSA。[配置方法参考](http://www.cnblogs.com/skig/p/6079457.html)，再强调一遍[*千万不能忘记设置KeyId*](https://github.com/IdentityServer/CrossVersionIntegrationTests/issues/1)
 1. ApiResource及Client的配置参考[IdentityServer3和4各组件兼容性测试项目](https://github.com/IdentityServer/CrossVersionIntegrationTests.git)
 1. Asp.Net WebApi(非.Net Core项目)对Scope进行细粒度验证（落实到一个具体Api），使用*ScopeAuthorize*,安装Nuget组件[*源码参考*](https://github.com/IdentityModel/Thinktecture.IdentityModel/blob/master/source/WebApi.ScopeAuthorization/ScopeAuthorizeAttribute.cs)  
     `Install-Package Thinktecture.IdentityModel.WebApi.ScopeAuthorization` 
