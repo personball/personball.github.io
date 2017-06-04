@@ -46,6 +46,16 @@ _以下，称这个使用了IdentityServer4的OAuth2.0服务的项目称为Passp
 1. Asp.Net WebApi(非.Net Core项目)对Scope进行细粒度验证（落实到一个具体Api），使用*ScopeAuthorize*,安装Nuget组件[*源码参考*](https://github.com/IdentityModel/Thinktecture.IdentityModel/blob/master/source/WebApi.ScopeAuthorization/ScopeAuthorizeAttribute.cs)  
     `Install-Package Thinktecture.IdentityModel.WebApi.ScopeAuthorization` 
 
+# Asp.Net Core项目部署笔记
+
+1. 服务器安装[DotNetCore.1.0.4_1.1.1-WindowsHosting.exe](http://download.microsoft.com/download/3/8/1/381CBBF3-36DA-4983-BFF3-5881548A70BE/DotNetCore.1.0.4_1.1.1-WindowsHosting.exe)
+1. 服务器管理员cmd执行 net stop was /y && net start w3svc
+1. 新建站点
+1. 站点应用程序池设为无托管代码（IIS仅作为反向代理和方便站点发布）
+1. 启用web部署
+1. 手动vs发布，选iis，webdeploy，执行连接字符串，指定迁移连接字符串
+1. 如果遇到IIS Aspnet Core Module启动dotnet进程失败，web.config启用stdoutLogEnabled，并创建logs目录，查看错误信息
+
 # 参考资源
 
 * [IdentityServer4官方文档](https://identityserver4.readthedocs.io/en/release/)
