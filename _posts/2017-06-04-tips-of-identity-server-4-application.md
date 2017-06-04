@@ -32,8 +32,8 @@ _以下，称这个使用了IdentityServer4的OAuth2.0服务的项目称为Passp
 >
 >* 其一，ApiResource 无需配置ApiSecret（中间件会请求http://{passport-project-domain}/.well-known/openid-configuration/jwks获取RSA公钥验签）;  
 >* 其二，Client端（调用方）必须设置密码（clientId,clientSecret,请求所需scopes）
->
-
+>* 其三，*配置RSA的时候，千万不能忘记设置KeyId*，否则IdentityServer3.AccessTokenValidation获取jwks时kid为null将抛异常。建议KeyId和Rsa的Base64字符串一起存配置文件。[参考issue](https://github.com/IdentityServer/CrossVersionIntegrationTests/issues/1)
+> 
 
 # 搭建路线
 
