@@ -64,3 +64,4 @@ _以下，称这个使用了IdentityServer4的OAuth2.0服务的项目称为Passp
 * [validating-scopes-in-asp-net-4-and-5](https://leastprivilege.com/2015/12/28/validating-scopes-in-asp-net-4-and-5/)
 * [ASP.NET Core实现OAuth2.0的ResourceOwnerPassword和ClientCredentials模式](http://www.cnblogs.com/skig/p/6079457.html)
 * [NLog.Web/wiki/Getting-started-with-ASP.NET-Core-(csproj---vs2017)](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-(csproj---vs2017))
+* [Host on Windows with IIS](https://docs.microsoft.com/en-us/aspnet/core/publishing/iis)
