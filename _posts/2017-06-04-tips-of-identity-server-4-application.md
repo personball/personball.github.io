@@ -58,6 +58,7 @@ _以下，称这个使用了IdentityServer4的OAuth2.0服务的项目称为Passp
 
 # 参考资源
 
+* [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 * [IdentityServer4官方文档](https://identityserver4.readthedocs.io/en/release/)
 * [IdentityServer3和4各组件兼容性测试项目](https://github.com/IdentityServer/CrossVersionIntegrationTests.git)
 * [IdentityServer4.Samples](https://github.com/IdentityServer/IdentityServer4.Samples.git)
