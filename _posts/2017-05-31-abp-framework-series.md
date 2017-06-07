@@ -47,12 +47,15 @@ tags: [ABP]
 1. 如何引入消息机制?(基于Rebus.Rabbitmq)
 
 ## 其他主题
-1. T4应用:权限树定义（需puyu授权）
+1. T4应用:权限树定义（需 @菜刀与板砖 授权）
 1. T4应用:MqMessages Auto Generate
 1. T4应用:EventDataPublishHandler Auto Generate
 1. AbpTestBase:单元测试项目，推荐实践
+1. 控制台程序、Windows服务中使用Abp框架
 
 ## Abplus扩展库介绍
 1. WebApi接口版本化
-1. 旧版发布队列消息方案介绍
+1. 旧版发布队列消息和消费队列消息的方案介绍
 1. 新版发布队列消息的泛型版默认handler实现
+1. 新版队列消息消费方案和MessageHandler模块化管理介绍（需 @菜刀与板砖 授权其中的部分内容）
+
