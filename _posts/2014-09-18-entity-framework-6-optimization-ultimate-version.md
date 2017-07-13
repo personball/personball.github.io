@@ -138,6 +138,7 @@ EF的文档要认真看啊！这个真是不小心挖出来的解决方案，主
 
 Ngen使用方法：
 
+	//%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\ngen
 	安装命令：[path to ngen]/ngen.exe install "[path to dll]"
 	查询命令：[path to ngen]/ngen.exe display System.Xaml /verbose|findstr "EntityFramework"
 	卸载命令：[path to ngen]/ngen.exe uninstall "[DisplayName in System.Xaml]"
