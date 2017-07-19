@@ -20,10 +20,17 @@ tags: [ELK]
             password => "password"
             vhost => "dev_host"
             host => "127.0.0.1"
+            add_field => {"env"=>"DEV"}
+            add_field => {"test"=>"test"}
+        }
+    }
+    filter{
+        date{
+            match => ["ExecutionTime","ISO8601"]
         }
     }
     output {
-    elasticsearch { hosts => ["localhost:9200"] }
+        elasticsearch { hosts => ["localhost:9200"] }
     }
 
 `/usr/share/logstash/bin/logstash -f logstash-rabbitmq-input.conf --config.test_and_exit` 检测配置是否正确
