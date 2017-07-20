@@ -39,6 +39,30 @@ Server:CentOS 7
 
 执行`sudo yum install logstash`
 
+如果执行`systemctl list-unit-files|grep logstash`未找到logstash.service,则在`/etc/systemd/system`目录下新建logstash.service,内容如下
+
+    [Unit]
+    Description=logstash
+
+    [Service]
+    Type=simple
+    User=logstash
+    Group=logstash
+    # Load env vars from /etc/default/ and /etc/sysconfig/ if they exist.
+    # Prefixing the path with '-' makes it try to load, but if the file doesn't
+    # exist, it continues onward.
+    EnvironmentFile=-/etc/default/logstash
+    EnvironmentFile=-/etc/sysconfig/logstash
+    ExecStart=/usr/share/logstash/bin/logstash "--path.settings" "/etc/logstash"
+    Restart=always
+    WorkingDirectory=/
+    Nice=19
+    LimitNOFILE=16384
+
+    [Install]
+    WantedBy=multi-user.target
+
+
 ### Kibana
 
 执行`sudo yum install kibana`
