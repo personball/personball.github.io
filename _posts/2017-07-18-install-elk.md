@@ -47,3 +47,8 @@ Server:CentOS 7
 
 执行`sudo yum install filebeat`
 
+### X-Pack
+
+执行`sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack`
+执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`
+执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`
