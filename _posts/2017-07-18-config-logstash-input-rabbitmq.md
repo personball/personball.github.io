@@ -7,6 +7,30 @@ tags: [ELK]
 ---
 {% include JB/setup %}
 
+### 提醒
+`/etc/logstash/conf.d/`下虽然可以有多个conf文件，但是Logstash执行时，实际上只有一个pipeline，它会将`/etc/logstash/conf.d/`下的所有conf文件合并成一个执行。如果希望每个input-filter-output都互相独立，那么就需要在input中加自定义field，后面所有的filter和output必须加if条件语句，如
+
+    input{
+        rabbitmq{
+            ...//略
+            add_field=>{"custom_t"=>"auditing"}
+        }
+    }
+    filter{
+        if [custom_t]=="auditing"{
+            date{
+                ...//略
+            }
+        }
+    }
+    output{
+        if [custom_t]=="auditing"{
+            elasticsearch{
+                ...//略
+                index=>"auditing-%{+YYYY.MM.dd}"
+            }
+        }
+    }
 
 ### Rabbitmq Input 解析审计日志
 

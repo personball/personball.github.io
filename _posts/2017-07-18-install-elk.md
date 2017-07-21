@@ -83,11 +83,11 @@ Server:CentOS 7
 
 执行`sudo yum install filebeat`
 
-### X-Pack
+### X-Pack（Kibana开启认证机制）
 
-* 执行`sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack`  
-* 执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`  
-* 执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`
+* （必选）执行`sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack`  
+* （必选）执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`  
+* （可选）执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`
 
 启用x-pack后，需要到各组件配置文件中修改账号密码。默认账号密码为:
 
@@ -95,6 +95,61 @@ Server:CentOS 7
 * kibana : changeme
 * logstash_system: changeme
 
+其中内建账号elastic的权限最高
+
+    [personball@centos-linux ~]$ curl -XGET http://elastic:changeme@localhost:9200/_xpack/security/user
+    {
+        "elastic": {
+            "username": "elastic",
+            "roles": ["superuser"],
+            "full_name": null,
+            "email": null,
+            "metadata": {
+                "_reserved": true
+            },
+            "enabled": true
+        },
+        "kibana": {
+            "username": "kibana",
+            "roles": ["kibana_system"],
+            "full_name": null,
+            "email": null,
+            "metadata": {
+                "_reserved": true
+            },
+            "enabled": true
+        },
+        "logstash_system": {
+            "username": "logstash_system",
+            "roles": ["logstash_system"],
+            "full_name": null,
+            "email": null,
+            "metadata": {
+                "_reserved": true
+            },
+            "enabled": true
+        }
+    }
+    [personball@centos-linux ~]$
+
 访问elasticsearch携带账号密码示例
 
     curl -XGET http://elastic:changeme@localhost:9200/
+
+`/etc/kibana/kibana.yml`配置更新，设置好elasticsearch的访问密码
+
+    server.port: 5601
+    server.host: "10.211.55.5"
+    elasticsearch.url: "http://localhost:9200"
+    elasticsearch.username: "elastic"
+    elasticsearch.password: "changeme"
+
+`/etc/logstash/conf.d/`各配置更新，设置好output访问elasticsearch的访问密码
+
+    elasticsearch {
+        hosts => ["localhost:9200"]
+        user => "elastic"
+        password => "changeme"
+    }
+
+
