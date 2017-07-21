@@ -19,7 +19,7 @@ Server:CentOS 7
 
     rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 
-在`/etc/yum.repo.d/`建立文件`elastic.repo`内容如下
+在`/etc/yum.repo.d/`建立文件`elastic.repo`,内容如下
 
     [elastic-5.x]
     name=Elasticsearch repository for 5.x packages
@@ -35,11 +35,16 @@ Server:CentOS 7
 
 执行`sudo yum install elasticsearch`
 
+* [ElasticSearch 配置堆内存大小](https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html)
+* [ElasticSearch 禁用Swapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration-memory.html)
+
+
 ### LogStash
 
 执行`sudo yum install logstash`
 
-如果执行`systemctl list-unit-files|grep logstash`未找到logstash.service,则在`/etc/systemd/system`目录下新建logstash.service,内容如下
+如果执行`systemctl list-unit-files|grep logstash`未找到logstash.service,  
+则在`/etc/systemd/system`目录下新建logstash.service,内容如下
 
     [Unit]
     Description=logstash
@@ -63,9 +68,16 @@ Server:CentOS 7
     WantedBy=multi-user.target
 
 
+[Logstash 配置持久化缓冲队列](https://www.elastic.co/guide/en/logstash/current/persistent-queues.html)
+
 ### Kibana
 
 执行`sudo yum install kibana`
+
+配置端口和Host,在`/etc/kibana/kibana.yml`中启用
+
+    server.port: 5601
+    server.host: "your_host_or_ip"
 
 ### Filebeat
 
@@ -75,4 +87,14 @@ Server:CentOS 7
 
 * 执行`sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack`  
 * 执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`  
-* 执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`  
+* 执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`
+
+启用x-pack后，需要到各组件配置文件中修改账号密码。默认账号密码为:
+
+* elastic : changeme
+* kibana : changeme
+* logstash_system: changeme
+
+访问elasticsearch携带账号密码示例
+
+    curl -XGET http://elastic:changeme@localhost:9200/
