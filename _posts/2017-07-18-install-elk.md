@@ -152,4 +152,10 @@ Server:CentOS 7
         password => "changeme"
     }
 
+### Metricbeat 系统级监控
 
+`sudo yum install metricbeat`
+
+导入Dashboard `/usr/share/metricbeat/scripts/import_dashboards -es http://elastic:changeme@localhost:9200/`
+
+[Metricbeate配置](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-configuration.html)
