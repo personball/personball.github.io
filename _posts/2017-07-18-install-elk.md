@@ -156,6 +156,7 @@ Server:CentOS 7
 
 `sudo yum install metricbeat`
 
-导入Dashboard `/usr/share/metricbeat/scripts/import_dashboards -es http://elastic:changeme@localhost:9200/`
+导入Dashboard `/usr/share/metricbeat/scripts/import_dashboards -es http://elastic:changeme@localhost:9200/`   
+（根据导入的查询和视图，添加自己的过滤器，可以较快建立可用的Dashboard）
 
 [Metricbeate配置](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-configuration.html)
