@@ -35,6 +35,17 @@ Server:CentOS 7
 
 执行`sudo yum install elasticsearch`
 
+ElasticSearch默认data目录为`/var/lib/elasticsearch`。  
+迁移索引文件步骤示例(从默认路径迁移到/data)
+
+    #停止es服务
+    ...
+    cp -r /var/lib/elasticsearch/ /data/elasticsearch/
+    chown -R elasticsearch:elasticsearch /data/elasticsearch/
+    mv /var/lib/elasticsearch/nodes /var/lib/elasticsearch/tmp_nodes
+    ...
+    #启用es服务
+
 * [ElasticSearch 配置堆内存大小](https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html)
 * [ElasticSearch 禁用Swapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration-memory.html)
 
