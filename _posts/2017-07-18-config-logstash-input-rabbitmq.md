@@ -64,6 +64,10 @@ tags: [ELK]
 
 ### Filebeat Input 解析nginx日志（非默认格式）
 
+nginx日志示例（非默认）
+
+    112.247.107.98 - - [27/Jul/2017:18:09:20 +0800] "POST /elasticsearch/_msearch HTTP/1.1" 200 0.830 0.830  21599 "http://abc.yourdomain.com/app/kibana" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4" "-" "10.173.163.214:5601" "abc.yourdomain.com:80"
+
 在`/etc/logstash/conf.d`目录新增`dev-nginx-filebeat.conf`内容如下
 
     input {
@@ -77,7 +81,7 @@ tags: [ELK]
     filter {
         grok {
             keep_empty_captures => "true"
-            match => { "message" => ["%{IPORHOST:nginx_access_remote_ip} - %{DATA:nginx_access_user_name} \[%{HTTPDATE:nginx_access_time}\] \"%{WORD:nginx_access_method} %{DATA:nginx_access_url} HTTP/%{NUMBER:nginx_access_http_version}\" %{NUMBER:nginx_access_response_code} %{NUMBER:nginx_access_body_sent_bytes} %{DATA:nginx_time1} %{DATA:nginx_time2} \"%{DATA:nginx_access_referrer}\" \"%{DATA:nginx_access_agent}\""] }
+            match => { "message" => ["%{IPORHOST:nginx_access_remote_ip} - %{DATA:nginx_access_user_name} \[%{HTTPDATE:nginx_access_time}\] \"%{WORD:nginx_access_method} %{DATA:nginx_access_url} HTTP/%{NUMBER:nginx_access_http_version}\" %{NUMBER:nginx_access_response_code} %{NUMBER:nginx_time1} %{DATA:nginx_time2} %{NUMBER:nginx_access_body_sent_bytes} \"%{DATA:nginx_access_referrer}\" \"%{DATA:nginx_access_agent}\" \"%{DATA:client_proxy_ip}\" \"%{IPORHOST:backend_server}:%{NUMBER:backend_server_port}\" \"%{IPORHOST:request_host}:%{NUMBER:request_host_port}\""] }
             remove_field => "message"
         }
         date {
