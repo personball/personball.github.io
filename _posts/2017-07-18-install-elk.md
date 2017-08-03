@@ -31,7 +31,7 @@ Server:CentOS 7
     type=rpm-md
 
 
-### ElasticSearch
+### 1. ElasticSearch
 
 执行`sudo yum install elasticsearch`
 
@@ -50,7 +50,7 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
 * [ElasticSearch 禁用Swapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration-memory.html)
 
 
-### LogStash
+### 2. LogStash
 
 执行`sudo yum install logstash`
 
@@ -81,7 +81,7 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
 
 [Logstash 配置持久化缓冲队列](https://www.elastic.co/guide/en/logstash/current/persistent-queues.html)
 
-### Kibana
+### 3. Kibana
 
 执行`sudo yum install kibana`
 
@@ -90,11 +90,11 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
     server.port: 5601
     server.host: "your_host_or_ip"
 
-### Filebeat
+### 4. Filebeat
 
 执行`sudo yum install filebeat`
 
-### X-Pack（Kibana开启认证机制）
+### 5. X-Pack（Kibana开启认证机制）
 
 * （必选）执行`sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack`  
 * （必选）执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`  
@@ -163,7 +163,7 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
         password => "changeme"
     }
 
-### Metricbeat 系统级监控
+### 6. Metricbeat 系统级监控
 
 `sudo yum install metricbeat`
 
@@ -171,3 +171,9 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
 （根据导入的查询和视图，添加自己的过滤器，可以较快建立可用的Dashboard）
 
 [Metricbeate配置](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-configuration.html)
+
+#### win2008 无法执行ps脚本安装Metricbeat的问题
+
+以管理员身份打开cmd，执行sc安装服务，命令如下
+
+    sc create metricbeat displayName= metricbeat binPath= "C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.exe -c C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.yml -path.home C:\\metricbeat-5.5.0-windows-x86_64 -paht.data C:\\ProgramData\\metricbeat" start= auto

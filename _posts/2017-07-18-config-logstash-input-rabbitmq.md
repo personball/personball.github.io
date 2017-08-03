@@ -32,7 +32,7 @@ tags: [ELK]
         }
     }
 
-### Rabbitmq Input 解析审计日志
+### 1. Rabbitmq Input 解析审计日志
 
 在`/etc/logstash/conf.d`目录新建`logstash-rabbitmq-input.conf`内容如下
 
@@ -62,7 +62,7 @@ tags: [ELK]
 
 `/usr/share/logstash/bin/logstash -f logstash-rabbitmq-input.conf --config.test_and_exit` 检测配置是否正确
 
-### Filebeat Input 解析nginx日志（非默认格式）
+### 2. Filebeat Input 解析nginx日志（非默认格式）
 
 nginx日志示例（非默认）
 
@@ -112,3 +112,73 @@ nginx日志示例（非默认）
     output.logstash:
     hosts: ["localhost:5044"]
 
+
+### 3. Filebeat Input 对接应用程序日志(Nlog)
+
+首先固定日志格式，特别注意时间戳，示例Nlog target
+
+    ...
+    <wrapper-target name="f2elk" xsi:type="AsyncWrapper" overflowAction="Grow" timeToSleepBetweenBatches="100" batchSize="100" queueLimit="10000">
+      <target name="file2elk"
+              xsi:type="File"
+              layout="[${date:format=dd/MMM/yyyy\:HH\:mm\:ss zz00:culture=en}] [${Env}] [${Proj}] [${level}] [${logger}] MSG[${message}]MSG EX[${exception:format=toString}]EX"
+              fileName="d://logs/elk/${Env}.${Proj}.${date:format=yyyyMMdd}.log"
+              keepFileOpen="false"
+              encoding="utf-8" />
+    </wrapper-target>
+    ...
+    <logger name="*" minlevel="Debug" writeTo="f2elk" />
+
+`filebeat.yml` 示例
+
+    filebeat.prospectors:
+    - input_type: log
+    paths:
+        - d:\logs\elk\*
+    
+    multiline.pattern: '^\[[0-9]{4}-[0-9]{2}-[0-9]{2}'
+    multiline.negate: true
+    multiline.match: after
+
+    output.logstash:
+    hosts: ["localhost:5044"]
+
+`/etc/logstash/conf.d/nlog-input.conf` 示例
+
+    input {
+        beats {
+            # The port to listen on for filebeat connections.
+            port => 5046
+            # The IP address to listen for filebeat connections.
+            host => "10.173.163.214"
+            add_field =>{"custom_t"=>"nlog"}
+        }
+    }
+    filter {
+        if [custom_t]=="nlog"{
+        grok {
+            keep_empty_captures => "true"
+            match => { "message" => ["\[%{HTTPDATE:LogTime}\] \[%{DATA:env}\] \[%{DATA:ProjectName}\] \[%{LOGLEVEL:Level}\] \[%{DATA:Logger}\] MSG\[%{DATA:LogMessage}\]MSG EX\[%{DATA:Exception}\]EX"] }
+            remove_field => "message"
+        }
+        date{
+            match => ["LogTime","dd/MMM/YYYY:H:m:s Z"]
+        }
+        }
+    }
+    output {
+        if [custom_t]=="nlog"{
+        elasticsearch {
+            hosts => localhost
+            manage_template => false
+            index => "nlog-%{+YYYY.MM.dd}"
+            document_type => "nlog"
+        }
+        }
+    }
+
+#### win2008 安装filebeat，无法执行ps脚本的问题
+
+管理员身份执行cmd，用sc命令安装服务
+
+    sc create filebeat displayName= filebeat binPath= "C:\\filebeat-5.5.1-windows-x86_64\\filebeat.exe -c C:\\filebeat-5.5.1-windows-x86_64\\filebeat.yml -path.home C:\\filebeat-5.5.1-windows-x86_64 -path.data C:\\ProgramData\\filebeat" start= auto
