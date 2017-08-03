@@ -176,4 +176,4 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
 
 以管理员身份打开cmd，执行sc安装服务，命令如下
 
-    sc create metricbeat displayName= metricbeat binPath= "C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.exe -c C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.yml -path.home C:\\metricbeat-5.5.0-windows-x86_64 -paht.data C:\\ProgramData\\metricbeat" start= auto
+    sc create metricbeat displayName= metricbeat binPath= "C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.exe -c C:\\metricbeat-5.5.0-windows-x86_64\\metricbeat.yml -path.home C:\\metricbeat-5.5.0-windows-x86_64 -path.data C:\\ProgramData\\metricbeat" start= auto
