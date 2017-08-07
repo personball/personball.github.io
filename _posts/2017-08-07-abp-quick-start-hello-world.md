@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ABP系列——QuickStartA:概述、思想、入门和HelloWorld"
-description: ""
+description: "ABP系列——QuickStartA:概述、思想、入门和HelloWorld。Abp最适合复杂的业务系统，以及天然针对SaaS的架构支持。"
 category: ABP
 tags: [abp]
 ---
@@ -11,8 +11,9 @@ tags: [abp]
 
 # 概述
 先表个态：对绝大多数人来说，ABP是成熟的，足以用到生产环境的。  
-最合适的：业务非常复杂且不追求极致性能的（这里并不是说ABP性能不行），或业务非常成熟稳定直接作为产品（卖软件）或服务（SaaS）进行销售的。  
-最不适合的：极致追求性能，言必谈性能，不谈业务的。  
+
+* 最适合的：业务非常复杂且不追求极致性能的（这里并不是说ABP性能不行），或业务非常成熟稳定直接作为产品（卖软件）或服务（SaaS）进行销售的。  
+* 最不适合的：极致追求性能，言必谈性能，不谈业务的。  
 
 这里适合和不适合，主要是说投入产出比（不适合的那群人本身就在抗拒着，忙着挑刺）。
 
@@ -32,13 +33,24 @@ PS：_为啥是1.4.2和1.5.0？今年上半年Abp作者升级太快了，跟不�
 
 # ABP思想
 
+1. 基于DDD（领域驱动设计）思想的分层架构；
+2. 模块化设计；
+3. 多租户，SaaS架构支持；
+4. 坚持SOLID，DRY等原则的最佳实践；
+5. UOW（UnitOfWork，工作单元），EventBus，业务逻辑解耦利器；
+6. IoC，依赖注入，本地化语言，泛型仓储，AOP，应用服务直接映射WebApi，聚合根，值对象，等等等等...
 
+借用官网的图：
 
+![abp-concerns](https://github.com/aspnetboilerplate/aspnetboilerplate/raw/dev/doc/img/abp-concerns.png)
+
+Don't repeat yourself! 框架替你做重复的事，你只需集中精力处理业务逻辑！和`IRepository.Update(entity)`说再见，`SaveChange`以后也只会偶尔露面了。
 
 # ABP入门
 
-感谢将ABP介绍到中文社区的朋友们，这段主要是传送门：
-1. [阳铭的博客](http://www.cnblogs.com/mienreal/p/4528470.html) 
+感谢将ABP介绍到中文社区的朋友们，这段主要是传送门： 
+
+1. [阳铭的博客](http://www.cnblogs.com/mienreal/p/4528470.html)   
 2. [ABP框架理论研究总结（较新）](http://www.cnblogs.com/farb/p/ABPTheory.html)
 
 建议想粗略看个大概的朋友可以先看看阳铭的博客，想认真入坑的，可以看tkb的《ABP框架理论研究总结》。  
