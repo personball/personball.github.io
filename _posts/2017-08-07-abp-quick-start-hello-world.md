@@ -42,7 +42,7 @@ PS：_为啥是1.4.2和1.5.0？今年上半年Abp作者升级太快了，跟不�
 
 借用官网的图：
 
-![abp-concerns](https://github.com/aspnetboilerplate/aspnetboilerplate/raw/dev/doc/img/abp-concerns.png)
+<img src="https://github.com/aspnetboilerplate/aspnetboilerplate/raw/dev/doc/img/abp-concerns.png" alt="abp-concerns" width="800px" />
 
 Don't repeat yourself! 框架替你做重复的事，你只需集中精力处理业务逻辑！和`IRepository.Update(entity)`说再见，`SaveChange`以后也只会偶尔露面了。
 
@@ -57,13 +57,39 @@ Don't repeat yourself! 框架替你做重复的事，你只需集中精力处理
 
 _这里把阳铭的博客列在前面是有些私心的,本人到上海工作的原因就是入了abp的坑，并且有幸进入阳铭的团队直到现在，所以领导的博客要靠前点。_
 
-
 # HelloWorld, Step By Step，先跑起来
 
+### Step 1
+点击链接>>[Abp官网解决方案自动生成工具](https://aspnetboilerplate.com/Templates)。  
+如图，我们选择`Asp.Net Mvc 5.x`项目，`多页Web应用`，`包含module-zero`，并且输入解决方案名称(同时是根命名空间)`Personball.Demo`：  
 
+<img src="/assets/images/abp/sln_generator.png" alt="sln generator" width="800px" />
 
+点击*生成项目*
 
+等待下载完成。解压后，得到解决方案：
 
+`-------以下暂时缺图----------`
+
+<img src="/assets/images/abp/sln_demo.png" alt="sln_demo"/>
+
+### Step 2
+接着，右键点击`Personball.Demo.Web`作为启动项目：
+
+![sln_demo2](/assets/images/abp/sln_demo2.png)
+
+修改`Web.config`数据库连接字符串（需要建立一个空数据库`Personball_Demo`）：
+
+![sln_demo3](/assets/images/abp/sln_demo3.png)
+
+然后，打开`程序包管理器控制台`，选择`Personball.Demo.Entityframework`作为当前项目，执行`Update-Database`：
+
+![sln_demo4](/assets/images/abp/sln_demo4.png)
+
+### Step 3
+最后，F5启动，ok，一切正常！
+
+![sln_demo5](/assets/images/abp/sln_demo5.png)
 
 # 这篇水完了，后面会有干货的。
 
