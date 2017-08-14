@@ -59,7 +59,7 @@ _这里把阳铭的博客列在前面是有些私心的,本人到上海工作的
 
 # HelloWorld, Step By Step，先跑起来
 
-### Step 1
+### Step 1 快速构建解决方案
 点击链接>>[Abp官网解决方案自动生成工具](https://aspnetboilerplate.com/Templates)。  
 如图，我们选择`Asp.Net Mvc 5.x`项目，`多页Web应用`，`包含module-zero`，并且输入解决方案名称(同时是根命名空间)`Personball.Demo`：  
 
@@ -69,27 +69,38 @@ _这里把阳铭的博客列在前面是有些私心的,本人到上海工作的
 
 等待下载完成。解压后，得到解决方案：
 
-`-------以下暂时缺图----------`
+<img src="/assets/images/abp/sln_demo.png" alt="sln_demo" width="800px"/>
 
-<img src="/assets/images/abp/sln_demo.png" alt="sln_demo"/>
+### Step 2 初始化数据库
 
-### Step 2
-接着，右键点击`Personball.Demo.Web`作为启动项目：
+<img src="/assets/images/abp/sln_demo2.png" alt="sln_demo2" width="800px">
 
-![sln_demo2](/assets/images/abp/sln_demo2.png)
+1. 右键点击`Personball.Demo.Web`作为启动项目;
+1. 修改`Web.config`数据库连接字符串，连接到可用的数据库实例（需要建立一个空数据库`Personball_Demo`）;
+1. 打开`程序包管理器控制台`，选择`Personball.Demo.Entityframework`作为当前项目;
+1. 执行`Update-Database`;
 
-修改`Web.config`数据库连接字符串（需要建立一个空数据库`Personball_Demo`）：
-
-![sln_demo3](/assets/images/abp/sln_demo3.png)
-
-然后，打开`程序包管理器控制台`，选择`Personball.Demo.Entityframework`作为当前项目，执行`Update-Database`：
-
-![sln_demo4](/assets/images/abp/sln_demo4.png)
-
-### Step 3
+### Step 3 启动
 最后，F5启动，ok，一切正常！
 
-![sln_demo5](/assets/images/abp/sln_demo5.png)
+<img src="/assets/images/abp/sln_demo3.png" alt="sln_demo3" width="800px">
+
+还可以立即体验到多语言机制哦！  
+*PS 默认账户是admin，密码123qwe*
+
+### Step 4 Git Init，一切就绪
+
+在程序包管理器控制台，运行如下命令获取vs版gitignore文件
+
+    (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore","$pwd\.gitignore")
+
+然后执行git初始化命令，添加所有文件，提交。
+
+    git init
+    git add .
+    git commit -am 'Init'
+
+Ok,一切就绪，赶快去了解业务需求吧！
 
 # 这篇水完了，后面会有干货的。
 
