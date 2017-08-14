@@ -136,7 +136,7 @@ nginx日志示例（非默认）
     paths:
         - d:\logs\elk\*
     
-    multiline.pattern: '^\[[0-9]{4}-[0-9]{2}-[0-9]{2}'
+    multiline.pattern: ^\[[0-9]{2}/[A-Za-z]{3}/[0-9]{4} #一定要注意时间戳格式和日志的输出匹配
     multiline.negate: true
     multiline.match: after
 
