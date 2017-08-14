@@ -16,7 +16,7 @@ tags: [ABP]
 先列个提纲，有想到的不定期补充，思路略混乱。
 
 ## What Is Abp
-1. QuickStart:概述、思想、入门和HelloWorld
+1. [QuickStart:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
 1. QuickStart:正确理解Abp解决方案的代码组织方式、分层和命名空间
 
 ### Abp框架已实现的功能介绍
