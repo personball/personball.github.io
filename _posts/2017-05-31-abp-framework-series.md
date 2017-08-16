@@ -17,7 +17,7 @@ tags: [ABP]
 
 ## What Is Abp
 1. [QuickStart:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
-1. QuickStart:正确理解Abp解决方案的代码组织方式、分层和命名空间
+1. [QuickStart:正确理解Abp解决方案的代码组织方式、分层和命名空间](/abp/2017/08/16/abp-quick-start-b-namespace-and-layers)
 
 ### Abp框架已实现的功能介绍
 1. 模块化，执行流程介绍
