@@ -28,6 +28,7 @@ tags: [ABP]
 1. 组织单元:组织机构及数据权限
 1. 身份认证:Asp.net Identity
 1. Notification:通知，订阅分发和实时通知 
+1. BackgroundJobStore 简单DB版(记一次踩坑)
 1. 其他Abp框架级机制的默认实现
 
 ### 常用配置示例
@@ -45,6 +46,7 @@ tags: [ABP]
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
 1. 如何引入消息机制?(基于Rebus.Rabbitmq)
+1. 如何增强插件机制(自动注册权限、菜单、路由及调通Mvc控制器)
 
 ## 其他主题
 1. T4应用:权限树定义
