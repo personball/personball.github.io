@@ -15,9 +15,15 @@ tags: [ABP]
 
 先列个提纲，有想到的不定期补充，思路略混乱。
 
+欢迎加入QQ群讨论：
+
+1. ABP架构设计交流群(134710707)
+2. ABP架构设计交流群2(579765441)
+
+
 ## What Is Abp
-1. [QuickStart:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
-1. [QuickStart:正确理解Abp解决方案的代码组织方式、分层和命名空间](/abp/2017/08/16/abp-quick-start-b-namespace-and-layers)
+1. [QuickStartA:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
+1. [QuickStartB:正确理解Abp解决方案的代码组织方式、分层和命名空间](/abp/2017/08/16/abp-quick-start-b-namespace-and-layers)
 
 ### Abp框架已实现的功能介绍
 1. 模块化，执行流程介绍
