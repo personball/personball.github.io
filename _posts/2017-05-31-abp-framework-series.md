@@ -22,6 +22,7 @@ tags: [ABP]
 ### Abp框架已实现的功能介绍
 1. 模块化，执行流程介绍
 1. 动态映射webapi，优劣介绍和推荐使用
+1. [如何使用Abp插件机制(注册权限、菜单、路由)](/abp/2017/08/21/abp-how-to-use-plugin)
 
 ### Module-Zero模块已实现的功能介绍
 1. RBAC:用户、角色和功能权限 
@@ -29,7 +30,6 @@ tags: [ABP]
 1. 身份认证:Asp.net Identity
 1. Notification:通知，订阅分发和实时通知 
 1. BackgroundJobStore 简单DB版(记一次踩坑)
-1. [如何使用Abp插件机制(注册权限、菜单、路由)](/abp/2017/08/21/abp-how-to-use-plugin)
 1. 其他Abp框架级机制的默认实现
 
 ### 常用配置示例
@@ -47,7 +47,6 @@ tags: [ABP]
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
 1. 如何引入消息机制?(基于Rebus.Rabbitmq)
-
 
 ## 其他主题
 1. T4应用:权限树定义
