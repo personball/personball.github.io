@@ -17,9 +17,9 @@ tags: [ABP]
 
 欢迎加入QQ群讨论：
 
-1. ABP架构设计交流群(134710707)
-2. ABP架构设计交流群2(579765441)
-
+1. ABP架构设计交流群(134710707，已满)
+1. ABP架构设计交流群2(579765441，已满)
+1. ABP架构设计交流群3(291304962)
 
 ## What Is Abp
 1. [QuickStartA:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
