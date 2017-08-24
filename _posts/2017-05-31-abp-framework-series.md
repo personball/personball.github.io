@@ -19,10 +19,14 @@ tags: [ABP]
 1. [QuickStartA:概述、思想、入门和HelloWorld](/abp/2017/08/07/abp-quick-start-hello-world)
 1. [QuickStartB:正确理解Abp解决方案的代码组织方式、分层和命名空间](/abp/2017/08/16/abp-quick-start-b-namespace-and-layers)
 
+
 ### Abp框架已实现的功能介绍
 1. 模块化，执行流程介绍
 1. 动态映射webapi，优劣介绍和推荐使用
 1. [如何使用Abp插件机制(注册权限、菜单、路由)](/abp/2017/08/21/abp-how-to-use-plugin)
+1. AbpTestBase:单元测试项目，推荐实践
+1. 控制台程序、Windows服务中使用Abp框架
+
 
 ### Module-Zero模块已实现的功能介绍
 1. RBAC:用户、角色和功能权限 
@@ -32,8 +36,6 @@ tags: [ABP]
 1. BackgroundJobStore 简单DB版(记一次踩坑)
 1. 其他Abp框架级机制的默认实现
 
-### 常用配置示例
-1. Swagger API文档自动化
 
 ## How To Use Abp
 1. 业务场景分析:EventData、Handler、UnitOfWork和观察者模式
@@ -43,17 +45,12 @@ tags: [ABP]
 1. 领域层代码设计:防止对象泛滥，领域服务轻量化
 1. 领域层代码设计:业务异常与错误码设计及异常提示语的本地化
 
+
 ## How To Extend Abp
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
 1. 如何引入消息机制?(基于Rebus.Rabbitmq)
 
-## 其他主题
-1. T4应用:权限树定义
-1. T4应用:MqMessages Auto Generate
-1. T4应用:EventDataPublishHandler Auto Generate
-1. AbpTestBase:单元测试项目，推荐实践
-1. 控制台程序、Windows服务中使用Abp框架
 
 ## Abplus扩展库介绍
 1. WebApi接口版本化
@@ -61,3 +58,9 @@ tags: [ABP]
 1. 新版发布队列消息的泛型版默认handler实现
 1. 新版队列消息消费方案和MessageHandler模块化管理介绍
 
+
+## 其他主题
+1. T4应用:权限树定义
+1. T4应用:MqMessages Auto Generate
+1. T4应用:EventDataPublishHandler Auto Generate
+1. Swagger API文档自动化
