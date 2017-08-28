@@ -267,4 +267,4 @@ OK，Last Question：如何提供插件单独的配置？
 
 ## 本文源码下载
 
-[Personball.Demo.7z](/assets/Personball.Demo.7z)
+[Personball.Demo.PlugIn.7z](/assets/Personball.Demo.PlugIn.7z)
