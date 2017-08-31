@@ -99,3 +99,8 @@ MetaWeblog是一个专门关于博客的协议标准，通过xmlrpc，很简单�
 
 ## 最后，强烈建议程序员一定要多玩玩命令行。
 
+git add .
+git commit -a
+git push && ./post_sync.rb _posts/2017-08-31-how-to-sync-post-to-cnblogs-with-ruby.md
+
+Go!
