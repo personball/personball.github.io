@@ -49,6 +49,11 @@ PS：_为啥是1.4.2和1.5.0？今年上半年Abp作者升级太快了，跟不�
 
 Don't repeat yourself! 框架替你做重复的事，你只需集中精力处理业务逻辑！和`IRepository.Update(entity)`说再见，`SaveChange`以后也只会偶尔露面了。
 
+追加最新架构图：  
+
+<img src="https://github.com/aspnetboilerplate/aspnetboilerplate/blob/dev/doc/img/abp-nlayer-architecture.png?raw=true" alt="abp-nlayer-architecture" width="800px" />
+
+
 # ABP入门
 
 感谢将ABP介绍到中文社区的朋友们，这段主要是传送门： 

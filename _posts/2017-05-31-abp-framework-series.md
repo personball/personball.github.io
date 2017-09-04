@@ -40,6 +40,7 @@ tags: [ABP]
 ## How To Use Abp
 1. 业务场景分析:EventData、Handler、UnitOfWork和观察者模式
 1. 业务场景分析:实体，值对象，充血，private set
+1. [领域层代码设计:为什么值对象必须设计成不可变的](/abp/2017/09/04/abp-why-value-object-should-be-immutable)
 1. 领域层代码设计:聚合根的目的
 1. 领域层代码设计:装饰模式的目的
 1. 领域层代码设计:防止对象泛滥，领域服务轻量化
