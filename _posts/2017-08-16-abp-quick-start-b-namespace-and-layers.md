@@ -3,7 +3,7 @@ layout: post
 title: "ABP系列——QuickStartB:正确理解Abp解决方案的代码组织方式、分层和命名空间"
 description: "ABP系列——QuickStartB:正确理解Abp解决方案的代码组织方式、分层和命名空间，N层结构，DDD以及命名空间的秘密。"
 category: ABP
-tags: [abp]
+tags: [ABP]
 ---
 {% include JB/setup %}
 

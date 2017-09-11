@@ -100,6 +100,8 @@ ElasticSearch默认data目录为`/var/lib/elasticsearch`。
 * （必选）执行`sudo /usr/share/kibana/bin/kibana-plugin install x-pack`  
 * （可选）执行`sudo /usr/share/logstash/bin/logstash-plugin install x-pack`
 
+*X-Pack是收费的，试用期到期后会提示付费，届时不想付费可以移除X-Pack，但一定记得对访问进行IP限制。*
+
 启用x-pack后，需要到各组件配置文件中修改账号密码。默认账号密码为:
 
 * elastic : changeme

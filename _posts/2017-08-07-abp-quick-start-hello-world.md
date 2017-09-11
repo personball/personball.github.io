@@ -3,7 +3,7 @@ layout: post
 title: "ABP系列——QuickStartA:概述、思想、入门和HelloWorld"
 description: "ABP系列——QuickStartA:概述、思想、入门和HelloWorld。Abp最适合复杂的业务系统，以及天然针对SaaS的架构支持。"
 category: ABP
-tags: [abp]
+tags: [ABP]
 ---
 {% include JB/setup %}
 

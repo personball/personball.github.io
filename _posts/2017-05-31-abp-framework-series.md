@@ -33,7 +33,7 @@ tags: [ABP]
 1. 组织单元:组织机构及数据权限
 1. 身份认证:Asp.net Identity
 1. Notification:通知，订阅分发和实时通知 
-1. BackgroundJobStore 简单DB版(记一次踩坑)
+1. [Abp后台作业系统介绍](/abp/2017/09/05/abp-four-impl-of-background-job-store)
 1. 其他Abp框架级机制的默认实现
 
 
