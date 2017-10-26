@@ -38,6 +38,7 @@ tags: [ABP]
 
 
 ## How To Use Abp
+1. [DTO入参验证使用方法及经验分享](/abp/2017/10/26/abp-input-dto-validation)
 1. 业务场景分析:EventData、Handler、UnitOfWork和观察者模式
 1. 业务场景分析:实体，值对象，充血，private set
 1. [领域层代码设计:为什么值对象必须设计成不可变的](/abp/2017/09/04/abp-why-value-object-should-be-immutable)
@@ -50,7 +51,7 @@ tags: [ABP]
 ## How To Extend Abp
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
-1. 如何引入消息机制?(基于Rebus.Rabbitmq)
+1. 如何引入消息队列机制?(基于Rebus.Rabbitmq)
 
 
 ## Abplus扩展库介绍
