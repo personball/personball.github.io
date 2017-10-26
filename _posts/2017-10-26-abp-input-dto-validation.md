@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "DTO入参验证使用方法及经验分享"
-description: "DTO入参验证使用方法及经验分享，声明式的入参验证逻辑，IValidatableObject，ICustomValidate，多个DTO重用验证逻辑，OOP多态。"
+title: "Abp系列——DTO入参验证使用方法及经验分享"
+description: "Abp系列——DTO入参验证使用方法及经验分享，声明式的入参验证逻辑，IValidatableObject，ICustomValidate，多个DTO重用验证逻辑，OOP多态。"
 category: ABP
 tags: [ABP]
 ---
