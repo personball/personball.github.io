@@ -51,7 +51,7 @@ tags: [ABP]
 ## How To Extend Abp
 1. 模块化，什么时候需要写一个模块?
 1. 如何修复Signalr问题?
-1. 如何引入消息队列机制?(基于Rebus.Rabbitmq)
+1. [集成消息队列功能(基于Rebus.Rabbitmq)](/abp/2017/10/25/abp-message-queue-integration-sln)
 
 
 ## Abplus扩展库介绍
