@@ -28,7 +28,7 @@ tags: [ABP]
 还是从`Personball.Demo`项目开始，我从`dev`分支新建了一个`feature_t4_permissions`。  
 展开`Personball.Demo.Core`程序集，按下述步骤操作
 
-### 1.安装包，获取相关文件
+### 安装包，获取相关文件
 
 打开*程序包管理器控制台*，默认项目选中`Personball.Demo.Core`，执行如下命令，安装获取相关文件：  
 
