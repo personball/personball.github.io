@@ -62,7 +62,7 @@ tags: [ABP]
 
 
 ## 其他主题
-1. T4应用:权限树定义
+1. [T4应用:权限树定义](/abp/2017/11/21/abp-t4-for-permissions)
 1. T4应用:MqMessages Auto Generate
 1. T4应用:EventDataPublishHandler Auto Generate
 1. Swagger API文档自动化
