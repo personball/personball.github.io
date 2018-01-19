@@ -3,7 +3,7 @@ layout: post
 title: "利用find找特定时段内建立（修改过）的文件"
 description: "使用touch命令和find命令寻找特定时间段内建立或修改过的文件。"
 category: Shell
-tags: find Bash
+tags: Bash
 ---
 {% include JB/setup %}
 

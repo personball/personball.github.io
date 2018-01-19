@@ -3,7 +3,7 @@ layout: post
 title: "为 Xamarin Studio 创建的 Asp.Net Mvc 项目配置 gitignore"
 description: "为 Xamarin Studio 创建的 Asp.Net Mvc 项目配置 gitignore"
 category: Mono
-tags: git mac AspNetMvc
+tags: Git MacOS AspNetMvc
 ---
 {% include JB/setup %}
 

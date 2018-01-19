@@ -3,7 +3,7 @@ layout: post
 title: "Mac系统上的几个命令解释器(控制台)"
 description: "Mac系统上的几个解释器的常用功能说明，七周七语言"
 category: mac_os
-tags: REPL Tips Mac
+tags: REPL MacOS
 ---
 {% include JB/setup %}
 
