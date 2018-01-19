@@ -3,7 +3,7 @@ layout: post
 title: "IdentityServer4(OAuth2.0服务)折腾笔记"
 description: "使用IdentityServer4部署基于OAuth2.0的OIDC(OpenID Connect)服务和Api认证授权服务"
 category: OAuth2
-tags: [OAuth2 IdentityServer4]
+tags: OAuth2 IdentityServer4
 ---
 {% include JB/setup %}
   

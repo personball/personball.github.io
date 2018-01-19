@@ -3,7 +3,7 @@ layout: post
 title: "ElasticSearch 小记"
 description: "ElasticSearch 安装，索引，查询，聚合"
 category: ElasticSearch
-tags: [ElasticSearch ELK]
+tags: ElasticSearch ELK
 ---
 {% include JB/setup %}
 

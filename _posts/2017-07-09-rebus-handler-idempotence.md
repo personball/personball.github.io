@@ -3,7 +3,7 @@ layout: post
 title: "Rebus Handler的重试机制和幂等处理"
 description: "简单介绍Rebus消费端Handler的重试机制和如何引入幂等处理机制。"
 category: PubSub
-tags: [Rebus Amqp]
+tags: Rebus Amqp
 ---
 {% include JB/setup %}
 
