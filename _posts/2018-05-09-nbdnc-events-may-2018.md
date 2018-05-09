@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2018年5月8日宁波dotnet社区首次活动回顾"
-description: "2018年5月8日宁波dotnet社区首次活动回顾"
+title: "2018年5月6日宁波dotnet社区首次活动回顾"
+description: "2018年5月6日宁波dotnet社区首次活动回顾"
 category: events
 tags: [NBDNC events]
 ---
