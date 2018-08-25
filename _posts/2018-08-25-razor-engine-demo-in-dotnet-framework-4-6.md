@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "模板引擎Razor Engine 用法示例"
+title: "模板引擎Razor Engine用法示例"
 description: "Razor Engine 用法示例"
 category: tools
 tags: [RazorEngine]
