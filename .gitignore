@@ -9,3 +9,4 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 post_sync.yml
+.jekyll-metadata
