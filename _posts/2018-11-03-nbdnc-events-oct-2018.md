@@ -3,7 +3,7 @@ layout: post
 title: "2018年10月28日宁波dotnet社区活动回顾及下次活动预告"
 description: "2018年10月28日宁波dotnet社区活动回顾及下次活动预告"
 category: events
-tags: [NBDNC events]
+tags: NBDNC events
 ---
 {% include JB/setup %}
 
@@ -53,7 +53,7 @@ tags: [NBDNC events]
 
 ### 下次活动预告
 
-**预定2018年12月1日，宁波dotnet社区将邀请神秘微软MVP来给大家做一场分享，敬请期待。**
+**预定2018年12月1日，宁波dotnet社区将邀请微软MVP来给大家做一场分享，敬请期待。**
 
 ### 附件
 

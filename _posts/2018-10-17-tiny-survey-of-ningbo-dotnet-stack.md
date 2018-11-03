@@ -3,7 +3,7 @@ layout: post
 title: "宁波dotnet社区（NBDNC）第一次问卷关于dotnet技术栈的小调查"
 description: "宁波dotnet社区（NBDNC，NingBo DotNet Community）第一次问卷关于dotnet技术栈的小调查。"
 category: nbdnc
-tags: [NBDNC]
+tags: NBDNC events
 ---
 {% include JB/setup %}
 

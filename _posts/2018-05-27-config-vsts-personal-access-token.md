@@ -3,7 +3,7 @@ layout: post
 title: "配置VSTS认证方式使用Personal Access Token"
 description: "配置VSTS认证方式使用Personal Access Token，Git, 避免重复输入密码"
 category: vsts
-tags: [VSTS Git]
+tags: VSTS Git
 ---
 {% include JB/setup %}
 
