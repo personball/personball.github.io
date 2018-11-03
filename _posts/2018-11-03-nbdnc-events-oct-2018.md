@@ -43,11 +43,11 @@ tags: [NBDNC events]
 
 ### 本次活动留影
 
-<img src="/assets/images/NBDNC_Oct_2018_a.jpg" alt="all" width="600px"/>
+<img src="/assets/images/NBDNC_Oct_2018_a2.jpg" alt="all" width="600px"/>
 
-<img src="/assets/images/NBDNC_Oct_2018_b.jpg" alt="all" width="600px"/>
+<img src="/assets/images/NBDNC_Oct_2018_b2.jpg" alt="all" width="600px"/>
 
-<img src="/assets/images/NBDNC_Oct_2018_all.jpg" alt="all" width="600px"/>
+<img src="/assets/images/NBDNC_Oct_2018_all2.jpg" alt="all" width="600px"/>
 
 感谢宁波猿云(http://www.yrcloud.net/)提供场地支持！
 

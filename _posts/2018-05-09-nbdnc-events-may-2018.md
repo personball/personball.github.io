@@ -66,7 +66,7 @@ tags: [NBDNC events]
 
 #### 活动合影
 
-<img src="/assets/images/NBDNC_May_2018_all.jpeg" alt="all" width="600px"/>
+<img src="/assets/images/NBDNC_May_2018_all2.jpg" alt="all" width="600px"/>
 
 ### 感谢
 
