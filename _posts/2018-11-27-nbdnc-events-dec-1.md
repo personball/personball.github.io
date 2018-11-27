@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2018年12月1日宁波dotnet社区线下活动预告"
-description: "2018年12月1日宁波dotnet社区活动预告，dotnet平台构建千万级实时计算平台，Azure平台实操：WebJob & Storage"
+title: "2018年12月1日宁波dotnet社区线下活动"
+description: "2018年12月1日宁波dotnet社区活动，dotnet平台构建千万级实时计算平台，Azure平台实操：WebJob & Storage"
 category: events
 tags: NBDNC events
 ---
