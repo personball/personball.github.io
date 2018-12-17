@@ -30,9 +30,7 @@ tags: NBDNC events
 时间：2018年12月1日（周六）13：40 ~ 16：40  
 地点：宁波海曙区丽园南路1164号猿云俱乐部
 
-### 参与方式
+### 活动合影
 
-扫下方二维码报名
-
-<img src="/assets/images/nbdnc/dec01/NBDNC_Dec_01_2018_qrcode.jpg" alt="all" width="200px"/>
+<img src="/assets/images/nbdnc/dec01/all.jpg" alt="all" width="400px"/>
 
