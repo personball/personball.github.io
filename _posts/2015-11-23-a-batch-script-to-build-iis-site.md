@@ -13,7 +13,7 @@ batch_createSites.bat
 
     @echo off
     rem 以管理员身份执行本脚本，可添加多条call 以建立多个站点
-    call path\to\createSites.bat www com.yourdomain yourdomain.com d:\Sites
+    call C:\Users\Administrator\Desktop\createSites.bat www com.yourdomain yourdomain.com c:\Sites
     pause
 
 createSites.bat
@@ -34,9 +34,9 @@ createSites.bat
     echo %physical_Path%
     mkdir %physical_Path%
 
-     inetsrv\appcmd add site /name:%site_name% /physicalPath:%physical_Path% /bindings:http/*:80:%domain_name%
-     inetsrv\appcmd add apppool /name:%site_name% /managedRuntimeVersion:v4.0 /managedPipelineMode:Integrated
-     inetsrv\appcmd set site /site.name:%site_name% /[path='/'].applicationPool:%site_name%
+     C:\Windows\System32\inetsrv\appcmd add site /name:%site_name% /physicalPath:%physical_Path% /bindings:http/*:80:%domain_name%
+     C:\Windows\System32\inetsrv\appcmd add apppool /name:%site_name% /managedRuntimeVersion:v4.0 /managedPipelineMode:Integrated
+     C:\Windows\System32\inetsrv\appcmd set site /site.name:%site_name% /[path='/'].applicationPool:%site_name%
 
     rem 以下两行用于删除站点和应用程序池
     rem inetsrv\appcmd delete site /site.name:%site_name%
