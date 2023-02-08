@@ -22,7 +22,7 @@ tags: Bash
 	    ($0 $sum)          #sum小于10时将继续调用自身执行累加
 	fi
 	exit 0
-	personball@vostro:scan$./testsubshell.sh
+	personball@vostro:scan$./testsubshell.sh 1
 	2 32543
 	3 32544
 	4 32545
