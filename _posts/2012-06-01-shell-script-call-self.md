@@ -14,10 +14,10 @@ tags: Bash
 
 	personball@vostro:scan$cat testsubshell.sh
 	#!/bin/bash
-	sum=1
+	sum=$1
 	if [ $sum -lt 10 ] #终止条件，否则将进入死循环【递归死循环】
 	then
-	    let "sum=$sum+1"
+	    let sum=$sum+1
 	    echo $sum $$       #输出sum值和当前PID
 	    ($0 $sum)          #sum小于10时将继续调用自身执行累加
 	fi
